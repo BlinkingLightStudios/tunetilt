@@ -55,6 +55,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136" y="16"/>
         </scene>
         <!--Game Controller-->
         <scene sceneID="GCp-de-KXC">
@@ -200,7 +201,7 @@
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick Tune" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tcd-hI-rHu">
                                         <rect key="frame" x="358" y="0.0" width="358" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -223,6 +224,61 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HOr-z9-TcX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="887.40629685157433" y="16.800000000000001"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Kgy-WS-WWs">
+            <objects>
+                <viewController id="xb4-Bu-RzF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="syp-1B-Pvf">
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bqe-xg-DVf">
+                                <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Win" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9u-9F-Tj2">
+                                        <rect key="frame" x="0.0" y="0.0" width="736" height="138"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYZ-tP-fHP">
+                                        <rect key="frame" x="0.0" y="138" width="736" height="138"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="mGk-8Q-fvr">
+                                        <rect key="frame" x="0.0" y="276" width="736" height="138"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gci-O8-oz4">
+                                                <rect key="frame" x="0.0" y="0.0" width="368" height="138"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="Home"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vNc-Ko-JGY">
+                                                <rect key="frame" x="368" y="0.0" width="368" height="138"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="Try Again"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DTd-S1-TSQ" firstAttribute="bottom" secondItem="bqe-xg-DVf" secondAttribute="bottom" id="BPp-jn-exR"/>
+                            <constraint firstItem="bqe-xg-DVf" firstAttribute="leading" secondItem="DTd-S1-TSQ" secondAttribute="leading" id="S9B-ay-kKV"/>
+                            <constraint firstItem="bqe-xg-DVf" firstAttribute="top" secondItem="DTd-S1-TSQ" secondAttribute="top" id="g5E-jp-Ihx"/>
+                            <constraint firstItem="DTd-S1-TSQ" firstAttribute="trailing" secondItem="bqe-xg-DVf" secondAttribute="trailing" id="vHq-pg-AfT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DTd-S1-TSQ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dNe-LY-0AP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2371" y="16"/>
         </scene>
     </scenes>
 </document>
