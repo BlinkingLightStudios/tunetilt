@@ -9,10 +9,22 @@
 import UIKit
 
 class GameController: UIViewController {
+    
+    // Fields
+    var animatorManager: AnimatorManager?
+    
+    // Outlets
+    @IBOutlet weak var ball: UIView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // Create the animator controller
+        animatorManager = AnimatorManager(context: self.view)
+        animatorManager!.startGravityUpdates()
+        
+        animatorManager!.addObject(ball)
     }
 
     override func didReceiveMemoryWarning() {

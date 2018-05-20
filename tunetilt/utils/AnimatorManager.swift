@@ -70,7 +70,7 @@ class AnimatorManager {
         var gravityDirection = CGVector()
         motionManager!.startAccelerometerUpdates()
         if let accelerometerData = motionManager!.accelerometerData {
-            gravityDirection = CGVector(dx: accelerometerData.acceleration.x * 2, dy: -accelerometerData.acceleration.y * 2)
+            gravityDirection = CGVector(dx: -accelerometerData.acceleration.y, dy: -accelerometerData.acceleration.x)
         }
         return gravityDirection
     }

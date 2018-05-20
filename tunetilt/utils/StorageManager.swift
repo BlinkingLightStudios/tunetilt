@@ -23,35 +23,20 @@ struct StorageManager {
             .appendingPathExtension("json")
     }
     
-    func save(scores: [PlayerScore]) throws {
-        // Encode and write the data
-        let data = try JSONEncoder().encode(scores)
-        try write(data, to: playerScoresArchive)
-    }
-    
-    func save(settings: GameSettings) throws {
-        // Encode and write the data
-        let data = try JSONEncoder().encode(settings)
-        try write(data, to: gameSettingsArchive)
-    }
-    
-    func loadScores() throws -> [PlayerScore] {
-        // Read and decode the data
-        let data = try read(from: playerScoresArchive)
-        if let scores = try? JSONDecoder().decode([PlayerScore].self, from: data) {
-            return scores
-        }
-        throw DataAccessError.valueNotRecognised
-    }
-    
-    func loadSettings() throws -> GameSettings {
-        // Read and decode the data
-        let data = try read(from: gameSettingsArchive)
-        if let settings = try? JSONDecoder().decode(GameSettings.self, from: data) {
-            return settings
-        }
-        throw DataAccessError.valueNotRecognised
-    }
+//    func save(scores: [PlayerScore]) throws {
+//        // Encode and write the data
+//        let data = try JSONEncoder().encode(scores)
+//        try write(data, to: playerScoresArchive)
+//    }
+//    
+//    func loadScores() throws -> [PlayerScore] {
+//        // Read and decode the data
+//        let data = try read(from: playerScoresArchive)
+//        if let scores = try? JSONDecoder().decode([PlayerScore].self, from: data) {
+//            return scores
+//        }
+//        throw DataAccessError.valueNotRecognised
+//    }
     
     func read(from archive: URL) throws -> Data {
         // Attempt to read the data

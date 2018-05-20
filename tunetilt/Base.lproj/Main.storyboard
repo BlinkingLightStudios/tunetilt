@@ -133,6 +133,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kxA-7Q-DEZ"/>
                     </view>
+                    <connections>
+                        <outlet property="ball" destination="2y0-83-ofz" id="9H7-iZ-vG2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g27-hW-8NE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -240,7 +243,7 @@
         <!--View Controller-->
         <scene sceneID="Kgy-WS-WWs">
             <objects>
-                <viewController id="xb4-Bu-RzF" sceneMemberID="viewController">
+                <viewController id="xb4-Bu-RzF" customClass="ViewController" customModule="tunetilt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="syp-1B-Pvf">
                         <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
