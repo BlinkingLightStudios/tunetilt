@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		A95C12D9E8598A8C9927C9FA /* Pods_tunetilt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC4895FE5CA958516676BB4 /* Pods_tunetilt.framework */; };
+		BB786E1CA8E5DC113989A074 /* Pods_tunetilt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C59B65FE3C31E015FF53A99A /* Pods_tunetilt.framework */; };
+		C04290B420B3ECD200A95719 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C04290B320B3ECD200A95719 /* GoogleService-Info.plist */; };
+		C04290B820B3ECEA00A95719 /* SequencesStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04290B720B3ECEA00A95719 /* SequencesStorage.swift */; };
+		C04290BC20B3ED3A00A95719 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04290BB20B3ED3A00A95719 /* Notes.swift */; };
 		DD20DF3620B13E8000C7A9F4 /* SongSelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD20DF3520B13E7F00C7A9F4 /* SongSelectionController.swift */; };
 		DD20DF3A20B1458300C7A9F4 /* AnimatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD20DF3720B1458300C7A9F4 /* AnimatorManager.swift */; };
 		DD20DF3B20B1458300C7A9F4 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD20DF3820B1458300C7A9F4 /* StorageManager.swift */; };
@@ -36,6 +40,12 @@
 /* Begin PBXFileReference section */
 		62AF78B66F6A7160C9A023ED /* Pods-tunetilt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tunetilt.release.xcconfig"; path = "Pods/Target Support Files/Pods-tunetilt/Pods-tunetilt.release.xcconfig"; sourceTree = "<group>"; };
 		AAC4895FE5CA958516676BB4 /* Pods_tunetilt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tunetilt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE03A4768AB5555D6C668A55 /* Pods-tunetilt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tunetilt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tunetilt/Pods-tunetilt.debug.xcconfig"; sourceTree = "<group>"; };
+		C04290B320B3ECD200A95719 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C04290B720B3ECEA00A95719 /* SequencesStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequencesStorage.swift; sourceTree = "<group>"; };
+		C04290BB20B3ED3A00A95719 /* Notes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
+		C59B65FE3C31E015FF53A99A /* Pods_tunetilt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tunetilt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D57399A5D189BC39A1680677 /* Pods-tunetilt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tunetilt.release.xcconfig"; path = "Pods/Target Support Files/Pods-tunetilt/Pods-tunetilt.release.xcconfig"; sourceTree = "<group>"; };
 		DD20DF3520B13E7F00C7A9F4 /* SongSelectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongSelectionController.swift; sourceTree = "<group>"; };
 		DD20DF3720B1458300C7A9F4 /* AnimatorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatorManager.swift; sourceTree = "<group>"; };
 		DD20DF3820B1458300C7A9F4 /* StorageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
@@ -70,27 +80,37 @@
 			buildActionMask = 2147483647;
 			files = (
 				A95C12D9E8598A8C9927C9FA /* Pods_tunetilt.framework in Frameworks */,
+				BB786E1CA8E5DC113989A074 /* Pods_tunetilt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8CD493FFA076243926385286 /* Pods */ = {
+		52E3C483203ACF7FED2A79E6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F515D4D0A1E9943B7B2D0E62 /* Pods-tunetilt.debug.xcconfig */,
-				62AF78B66F6A7160C9A023ED /* Pods-tunetilt.release.xcconfig */,
+				AE03A4768AB5555D6C668A55 /* Pods-tunetilt.debug.xcconfig */,
+				D57399A5D189BC39A1680677 /* Pods-tunetilt.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		BC35B13E46A190C914C2FD1A /* Frameworks */ = {
+		8020562B3EDAA78D7A1D59A1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AAC4895FE5CA958516676BB4 /* Pods_tunetilt.framework */,
+				C59B65FE3C31E015FF53A99A /* Pods_tunetilt.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C04290BD20B3EE6E00A95719 /* NoteStorage */ = {
+			isa = PBXGroup;
+			children = (
+				C04290BB20B3ED3A00A95719 /* Notes.swift */,
+				C04290B720B3ECEA00A95719 /* SequencesStorage.swift */,
+			);
+			name = NoteStorage;
 			sourceTree = "<group>";
 		};
 		DD20DF3D20B1458900C7A9F4 /* utils */ = {
@@ -138,6 +158,8 @@
 				DDCD987320AA946300B8D4D2 /* Products */,
 				8CD493FFA076243926385286 /* Pods */,
 				BC35B13E46A190C914C2FD1A /* Frameworks */,
+				52E3C483203ACF7FED2A79E6 /* Pods */,
+				8020562B3EDAA78D7A1D59A1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -152,6 +174,7 @@
 		DDCD987420AA946300B8D4D2 /* tunetilt */ = {
 			isa = PBXGroup;
 			children = (
+				C04290BD20B3EE6E00A95719 /* NoteStorage */,
 				DD20DF3D20B1458900C7A9F4 /* utils */,
 				DDCD988720AA955E00B8D4D2 /* controller */,
 				DDCD987520AA946300B8D4D2 /* AppDelegate.swift */,
@@ -160,6 +183,7 @@
 				DDCD987E20AA946400B8D4D2 /* LaunchScreen.storyboard */,
 				DDCD988120AA946400B8D4D2 /* Info.plist */,
 				DD3A969720B41E9700465F8B /* assets */,
+				C04290B320B3ECD200A95719 /* GoogleService-Info.plist */,
 			);
 			path = tunetilt;
 			sourceTree = "<group>";
@@ -182,9 +206,11 @@
 			buildConfigurationList = DDCD988420AA946400B8D4D2 /* Build configuration list for PBXNativeTarget "tunetilt" */;
 			buildPhases = (
 				C4ABFE696CA1D794810DC8F4 /* [CP] Check Pods Manifest.lock */,
+				31A3B9C6ECEE6248D653B36D /* [CP] Check Pods Manifest.lock */,
 				DDCD986E20AA946300B8D4D2 /* Sources */,
 				DDCD986F20AA946300B8D4D2 /* Frameworks */,
 				DDCD987020AA946300B8D4D2 /* Resources */,
+				F56A1332E62DEE938F18770F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -245,6 +271,7 @@
 				DD3A96A920B41ED000465F8B /* c.mp3 in Resources */,
 				DD3A96A720B41ED000465F8B /* a#.mp3 in Resources */,
 				DDCD988020AA946400B8D4D2 /* LaunchScreen.storyboard in Resources */,
+				C04290B420B3ECD200A95719 /* GoogleService-Info.plist in Resources */,
 				DDCD987D20AA946400B8D4D2 /* Assets.xcassets in Resources */,
 				DDCD987B20AA946300B8D4D2 /* Main.storyboard in Resources */,
 				DD3A96AA20B41ED000465F8B /* b.mp3 in Resources */,
@@ -272,6 +299,40 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F56A1332E62DEE938F18770F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-tunetilt/Pods-tunetilt-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tunetilt/Pods-tunetilt-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -281,8 +342,10 @@
 			files = (
 				DDCD987820AA946300B8D4D2 /* ViewController.swift in Sources */,
 				DD20DF3A20B1458300C7A9F4 /* AnimatorManager.swift in Sources */,
+				C04290B820B3ECEA00A95719 /* SequencesStorage.swift in Sources */,
 				DD20DF3620B13E8000C7A9F4 /* SongSelectionController.swift in Sources */,
 				DD20DF3B20B1458300C7A9F4 /* StorageManager.swift in Sources */,
+				C04290BC20B3ED3A00A95719 /* Notes.swift in Sources */,
 				DD20DF3C20B1458300C7A9F4 /* AlertHelper.swift in Sources */,
 				DDCD988920AA959900B8D4D2 /* GameController.swift in Sources */,
 				DD3A969620B41E1800465F8B /* AudioHelper.swift in Sources */,
