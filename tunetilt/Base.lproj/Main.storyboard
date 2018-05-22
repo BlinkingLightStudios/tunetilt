@@ -22,27 +22,21 @@
                                 <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TuneTilt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yai-ae-RiP">
-                                        <rect key="frame" x="0.0" y="0.0" width="736" height="103.66666666666667"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="736" height="138"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mkl-Dp-4KP">
-                                        <rect key="frame" x="0.0" y="103.66666666666669" width="736" height="103.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="138" width="736" height="138"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <state key="normal" title="Play"/>
                                         <connections>
                                             <segue destination="EFL-PX-K4q" kind="show" id="2w6-Lq-9og"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iSt-Oa-EnR">
-                                        <rect key="frame" x="0.0" y="206.99999999999997" width="736" height="103.66666666666666"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXn-00-G3x">
-                                        <rect key="frame" x="0.0" y="310.66666666666669" width="736" height="103.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="276" width="736" height="138"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="High Scores"/>
                                     </button>

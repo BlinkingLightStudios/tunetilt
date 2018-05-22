@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB786E1CA8E5DC113989A074 /* Pods_tunetilt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C59B65FE3C31E015FF53A99A /* Pods_tunetilt.framework */; };
+		C04290B420B3ECD200A95719 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C04290B320B3ECD200A95719 /* GoogleService-Info.plist */; };
+		C04290B820B3ECEA00A95719 /* SequencesStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04290B720B3ECEA00A95719 /* SequencesStorage.swift */; };
+		C04290BC20B3ED3A00A95719 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04290BB20B3ED3A00A95719 /* Notes.swift */; };
 		DD20DF3620B13E8000C7A9F4 /* SongSelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD20DF3520B13E7F00C7A9F4 /* SongSelectionController.swift */; };
 		DD20DF3A20B1458300C7A9F4 /* AnimatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD20DF3720B1458300C7A9F4 /* AnimatorManager.swift */; };
 		DD20DF3B20B1458300C7A9F4 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD20DF3820B1458300C7A9F4 /* StorageManager.swift */; };
@@ -20,6 +24,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE03A4768AB5555D6C668A55 /* Pods-tunetilt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tunetilt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tunetilt/Pods-tunetilt.debug.xcconfig"; sourceTree = "<group>"; };
+		C04290B320B3ECD200A95719 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C04290B720B3ECEA00A95719 /* SequencesStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequencesStorage.swift; sourceTree = "<group>"; };
+		C04290BB20B3ED3A00A95719 /* Notes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
+		C59B65FE3C31E015FF53A99A /* Pods_tunetilt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tunetilt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D57399A5D189BC39A1680677 /* Pods-tunetilt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tunetilt.release.xcconfig"; path = "Pods/Target Support Files/Pods-tunetilt/Pods-tunetilt.release.xcconfig"; sourceTree = "<group>"; };
 		DD20DF3520B13E7F00C7A9F4 /* SongSelectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongSelectionController.swift; sourceTree = "<group>"; };
 		DD20DF3720B1458300C7A9F4 /* AnimatorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatorManager.swift; sourceTree = "<group>"; };
 		DD20DF3820B1458300C7A9F4 /* StorageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
@@ -39,12 +49,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB786E1CA8E5DC113989A074 /* Pods_tunetilt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52E3C483203ACF7FED2A79E6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AE03A4768AB5555D6C668A55 /* Pods-tunetilt.debug.xcconfig */,
+				D57399A5D189BC39A1680677 /* Pods-tunetilt.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8020562B3EDAA78D7A1D59A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C59B65FE3C31E015FF53A99A /* Pods_tunetilt.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C04290BD20B3EE6E00A95719 /* NoteStorage */ = {
+			isa = PBXGroup;
+			children = (
+				C04290BB20B3ED3A00A95719 /* Notes.swift */,
+				C04290B720B3ECEA00A95719 /* SequencesStorage.swift */,
+			);
+			name = NoteStorage;
+			sourceTree = "<group>";
+		};
 		DD20DF3D20B1458900C7A9F4 /* utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +97,8 @@
 			children = (
 				DDCD987420AA946300B8D4D2 /* tunetilt */,
 				DDCD987320AA946300B8D4D2 /* Products */,
+				52E3C483203ACF7FED2A79E6 /* Pods */,
+				8020562B3EDAA78D7A1D59A1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +113,7 @@
 		DDCD987420AA946300B8D4D2 /* tunetilt */ = {
 			isa = PBXGroup;
 			children = (
+				C04290BD20B3EE6E00A95719 /* NoteStorage */,
 				DD20DF3D20B1458900C7A9F4 /* utils */,
 				DDCD988720AA955E00B8D4D2 /* controller */,
 				DDCD987520AA946300B8D4D2 /* AppDelegate.swift */,
@@ -81,6 +121,7 @@
 				DDCD987C20AA946400B8D4D2 /* Assets.xcassets */,
 				DDCD987E20AA946400B8D4D2 /* LaunchScreen.storyboard */,
 				DDCD988120AA946400B8D4D2 /* Info.plist */,
+				C04290B320B3ECD200A95719 /* GoogleService-Info.plist */,
 			);
 			path = tunetilt;
 			sourceTree = "<group>";
@@ -102,9 +143,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DDCD988420AA946400B8D4D2 /* Build configuration list for PBXNativeTarget "tunetilt" */;
 			buildPhases = (
+				31A3B9C6ECEE6248D653B36D /* [CP] Check Pods Manifest.lock */,
 				DDCD986E20AA946300B8D4D2 /* Sources */,
 				DDCD986F20AA946300B8D4D2 /* Frameworks */,
 				DDCD987020AA946300B8D4D2 /* Resources */,
+				F56A1332E62DEE938F18770F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -154,12 +197,68 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDCD988020AA946400B8D4D2 /* LaunchScreen.storyboard in Resources */,
+				C04290B420B3ECD200A95719 /* GoogleService-Info.plist in Resources */,
 				DDCD987D20AA946400B8D4D2 /* Assets.xcassets in Resources */,
 				DDCD987B20AA946300B8D4D2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		31A3B9C6ECEE6248D653B36D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-tunetilt-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F56A1332E62DEE938F18770F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-tunetilt/Pods-tunetilt-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tunetilt/Pods-tunetilt-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DDCD986E20AA946300B8D4D2 /* Sources */ = {
@@ -168,8 +267,10 @@
 			files = (
 				DDCD987820AA946300B8D4D2 /* ViewController.swift in Sources */,
 				DD20DF3A20B1458300C7A9F4 /* AnimatorManager.swift in Sources */,
+				C04290B820B3ECEA00A95719 /* SequencesStorage.swift in Sources */,
 				DD20DF3620B13E8000C7A9F4 /* SongSelectionController.swift in Sources */,
 				DD20DF3B20B1458300C7A9F4 /* StorageManager.swift in Sources */,
+				C04290BC20B3ED3A00A95719 /* Notes.swift in Sources */,
 				DD20DF3C20B1458300C7A9F4 /* AlertHelper.swift in Sources */,
 				DDCD988920AA959900B8D4D2 /* GameController.swift in Sources */,
 				DDCD987620AA946300B8D4D2 /* AppDelegate.swift in Sources */,
@@ -314,6 +415,7 @@
 		};
 		DDCD988520AA946400B8D4D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE03A4768AB5555D6C668A55 /* Pods-tunetilt.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -333,6 +435,7 @@
 		};
 		DDCD988620AA946400B8D4D2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D57399A5D189BC39A1680677 /* Pods-tunetilt.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
