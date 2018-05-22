@@ -7,10 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A95C12D9E8598A8C9927C9FA /* Pods_tunetilt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC4895FE5CA958516676BB4 /* Pods_tunetilt.framework */; };
 		DD20DF3620B13E8000C7A9F4 /* SongSelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD20DF3520B13E7F00C7A9F4 /* SongSelectionController.swift */; };
 		DD20DF3A20B1458300C7A9F4 /* AnimatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD20DF3720B1458300C7A9F4 /* AnimatorManager.swift */; };
 		DD20DF3B20B1458300C7A9F4 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD20DF3820B1458300C7A9F4 /* StorageManager.swift */; };
 		DD20DF3C20B1458300C7A9F4 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD20DF3920B1458300C7A9F4 /* AlertHelper.swift */; };
+		DD3A969620B41E1800465F8B /* AudioHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3A969520B41E1800465F8B /* AudioHelper.swift */; };
+		DD3A96A720B41ED000465F8B /* a#.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD3A969A20B41ED000465F8B /* a#.mp3 */; };
+		DD3A96A820B41ED000465F8B /* c#.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD3A969B20B41ED000465F8B /* c#.mp3 */; };
+		DD3A96A920B41ED000465F8B /* c.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD3A969C20B41ED000465F8B /* c.mp3 */; };
+		DD3A96AA20B41ED000465F8B /* b.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD3A969D20B41ED000465F8B /* b.mp3 */; };
+		DD3A96AB20B41ED000465F8B /* g#.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD3A969E20B41ED000465F8B /* g#.mp3 */; };
+		DD3A96AC20B41ED000465F8B /* e.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD3A969F20B41ED000465F8B /* e.mp3 */; };
+		DD3A96AD20B41ED000465F8B /* d#.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD3A96A020B41ED000465F8B /* d#.mp3 */; };
+		DD3A96AE20B41ED000465F8B /* d.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD3A96A120B41ED000465F8B /* d.mp3 */; };
+		DD3A96AF20B41ED000465F8B /* f#.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD3A96A220B41ED000465F8B /* f#.mp3 */; };
+		DD3A96B020B41ED000465F8B /* g.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD3A96A320B41ED000465F8B /* g.mp3 */; };
+		DD3A96B120B41ED000465F8B /* f.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD3A96A420B41ED000465F8B /* f.mp3 */; };
+		DD3A96B220B41ED000465F8B /* a.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD3A96A520B41ED000465F8B /* a.mp3 */; };
 		DDCD987620AA946300B8D4D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCD987520AA946300B8D4D2 /* AppDelegate.swift */; };
 		DDCD987820AA946300B8D4D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCD987720AA946300B8D4D2 /* ViewController.swift */; };
 		DDCD987B20AA946300B8D4D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDCD987920AA946300B8D4D2 /* Main.storyboard */; };
@@ -20,10 +34,25 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		62AF78B66F6A7160C9A023ED /* Pods-tunetilt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tunetilt.release.xcconfig"; path = "Pods/Target Support Files/Pods-tunetilt/Pods-tunetilt.release.xcconfig"; sourceTree = "<group>"; };
+		AAC4895FE5CA958516676BB4 /* Pods_tunetilt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tunetilt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD20DF3520B13E7F00C7A9F4 /* SongSelectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongSelectionController.swift; sourceTree = "<group>"; };
 		DD20DF3720B1458300C7A9F4 /* AnimatorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatorManager.swift; sourceTree = "<group>"; };
 		DD20DF3820B1458300C7A9F4 /* StorageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		DD20DF3920B1458300C7A9F4 /* AlertHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
+		DD3A969520B41E1800465F8B /* AudioHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioHelper.swift; sourceTree = "<group>"; };
+		DD3A969A20B41ED000465F8B /* a#.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "a#.mp3"; sourceTree = "<group>"; };
+		DD3A969B20B41ED000465F8B /* c#.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "c#.mp3"; sourceTree = "<group>"; };
+		DD3A969C20B41ED000465F8B /* c.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = c.mp3; sourceTree = "<group>"; };
+		DD3A969D20B41ED000465F8B /* b.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = b.mp3; sourceTree = "<group>"; };
+		DD3A969E20B41ED000465F8B /* g#.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "g#.mp3"; sourceTree = "<group>"; };
+		DD3A969F20B41ED000465F8B /* e.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = e.mp3; sourceTree = "<group>"; };
+		DD3A96A020B41ED000465F8B /* d#.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "d#.mp3"; sourceTree = "<group>"; };
+		DD3A96A120B41ED000465F8B /* d.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = d.mp3; sourceTree = "<group>"; };
+		DD3A96A220B41ED000465F8B /* f#.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "f#.mp3"; sourceTree = "<group>"; };
+		DD3A96A320B41ED000465F8B /* g.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = g.mp3; sourceTree = "<group>"; };
+		DD3A96A420B41ED000465F8B /* f.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = f.mp3; sourceTree = "<group>"; };
+		DD3A96A520B41ED000465F8B /* a.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = a.mp3; sourceTree = "<group>"; };
 		DDCD987220AA946300B8D4D2 /* tunetilt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tunetilt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDCD987520AA946300B8D4D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDCD987720AA946300B8D4D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -32,6 +61,7 @@
 		DDCD987F20AA946400B8D4D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDCD988120AA946400B8D4D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DDCD988820AA959900B8D4D2 /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
+		F515D4D0A1E9943B7B2D0E62 /* Pods-tunetilt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tunetilt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tunetilt/Pods-tunetilt.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,15 +69,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A95C12D9E8598A8C9927C9FA /* Pods_tunetilt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8CD493FFA076243926385286 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F515D4D0A1E9943B7B2D0E62 /* Pods-tunetilt.debug.xcconfig */,
+				62AF78B66F6A7160C9A023ED /* Pods-tunetilt.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BC35B13E46A190C914C2FD1A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AAC4895FE5CA958516676BB4 /* Pods_tunetilt.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DD20DF3D20B1458900C7A9F4 /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				DD3A969520B41E1800465F8B /* AudioHelper.swift */,
 				DD20DF3920B1458300C7A9F4 /* AlertHelper.swift */,
 				DD20DF3720B1458300C7A9F4 /* AnimatorManager.swift */,
 				DD20DF3820B1458300C7A9F4 /* StorageManager.swift */,
@@ -55,11 +104,40 @@
 			path = utils;
 			sourceTree = "<group>";
 		};
+		DD3A969720B41E9700465F8B /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				DD3A969820B41ED000465F8B /* notes */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
+		DD3A969820B41ED000465F8B /* notes */ = {
+			isa = PBXGroup;
+			children = (
+				DD3A969A20B41ED000465F8B /* a#.mp3 */,
+				DD3A969B20B41ED000465F8B /* c#.mp3 */,
+				DD3A969C20B41ED000465F8B /* c.mp3 */,
+				DD3A969D20B41ED000465F8B /* b.mp3 */,
+				DD3A969E20B41ED000465F8B /* g#.mp3 */,
+				DD3A969F20B41ED000465F8B /* e.mp3 */,
+				DD3A96A020B41ED000465F8B /* d#.mp3 */,
+				DD3A96A120B41ED000465F8B /* d.mp3 */,
+				DD3A96A220B41ED000465F8B /* f#.mp3 */,
+				DD3A96A320B41ED000465F8B /* g.mp3 */,
+				DD3A96A420B41ED000465F8B /* f.mp3 */,
+				DD3A96A520B41ED000465F8B /* a.mp3 */,
+			);
+			path = notes;
+			sourceTree = "<group>";
+		};
 		DDCD986920AA946300B8D4D2 = {
 			isa = PBXGroup;
 			children = (
 				DDCD987420AA946300B8D4D2 /* tunetilt */,
 				DDCD987320AA946300B8D4D2 /* Products */,
+				8CD493FFA076243926385286 /* Pods */,
+				BC35B13E46A190C914C2FD1A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +159,7 @@
 				DDCD987C20AA946400B8D4D2 /* Assets.xcassets */,
 				DDCD987E20AA946400B8D4D2 /* LaunchScreen.storyboard */,
 				DDCD988120AA946400B8D4D2 /* Info.plist */,
+				DD3A969720B41E9700465F8B /* assets */,
 			);
 			path = tunetilt;
 			sourceTree = "<group>";
@@ -102,6 +181,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DDCD988420AA946400B8D4D2 /* Build configuration list for PBXNativeTarget "tunetilt" */;
 			buildPhases = (
+				C4ABFE696CA1D794810DC8F4 /* [CP] Check Pods Manifest.lock */,
 				DDCD986E20AA946300B8D4D2 /* Sources */,
 				DDCD986F20AA946300B8D4D2 /* Frameworks */,
 				DDCD987020AA946300B8D4D2 /* Resources */,
@@ -153,13 +233,46 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD3A96B120B41ED000465F8B /* f.mp3 in Resources */,
+				DD3A96AD20B41ED000465F8B /* d#.mp3 in Resources */,
+				DD3A96AE20B41ED000465F8B /* d.mp3 in Resources */,
+				DD3A96AC20B41ED000465F8B /* e.mp3 in Resources */,
+				DD3A96AB20B41ED000465F8B /* g#.mp3 in Resources */,
+				DD3A96B020B41ED000465F8B /* g.mp3 in Resources */,
+				DD3A96B220B41ED000465F8B /* a.mp3 in Resources */,
+				DD3A96AF20B41ED000465F8B /* f#.mp3 in Resources */,
+				DD3A96A820B41ED000465F8B /* c#.mp3 in Resources */,
+				DD3A96A920B41ED000465F8B /* c.mp3 in Resources */,
+				DD3A96A720B41ED000465F8B /* a#.mp3 in Resources */,
 				DDCD988020AA946400B8D4D2 /* LaunchScreen.storyboard in Resources */,
 				DDCD987D20AA946400B8D4D2 /* Assets.xcassets in Resources */,
 				DDCD987B20AA946300B8D4D2 /* Main.storyboard in Resources */,
+				DD3A96AA20B41ED000465F8B /* b.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C4ABFE696CA1D794810DC8F4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-tunetilt-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DDCD986E20AA946300B8D4D2 /* Sources */ = {
@@ -172,6 +285,7 @@
 				DD20DF3B20B1458300C7A9F4 /* StorageManager.swift in Sources */,
 				DD20DF3C20B1458300C7A9F4 /* AlertHelper.swift in Sources */,
 				DDCD988920AA959900B8D4D2 /* GameController.swift in Sources */,
+				DD3A969620B41E1800465F8B /* AudioHelper.swift in Sources */,
 				DDCD987620AA946300B8D4D2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,10 +428,12 @@
 		};
 		DDCD988520AA946400B8D4D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F515D4D0A1E9943B7B2D0E62 /* Pods-tunetilt.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2A9AZU9A2Y;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = tunetilt/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -333,10 +449,12 @@
 		};
 		DDCD988620AA946400B8D4D2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62AF78B66F6A7160C9A023ED /* Pods-tunetilt.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2A9AZU9A2Y;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = tunetilt/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (

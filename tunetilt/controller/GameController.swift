@@ -7,31 +7,45 @@
 //
 
 import UIKit
+import AudioKit
+
+let 🎼 = "hi"
 
 class GameController: UIViewController {
     
-    // Fields
-    var animatorManager: AnimatorManager?
-    
     // Outlets
-    @IBOutlet weak var ball: UIView!
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Create the animator controller
-        animatorManager = AnimatorManager(context: self.view)
-        animatorManager!.startGravityUpdates()
-        
-        animatorManager!.addObject(ball)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func onKeyTapped(_ sender: UIButton) {
+        let note: String = sender.titleLabel!.text!.lowercased()
+        
+        do {
+            try play(audio: getAudioFile(for: note))
+        } catch {
+            print("error playing file")
+        }
     }
-
+    
+    func play(audio: String) throws {
+        let audioFile = try AKAudioFile(readFileName: "\(audio).mp3")
+        
+        let samplePlayer = AKSamplePlayer(file: audioFile)
+        
+        samplePlayer
+        
+        AudioKit.output = samplePlayer
+        try AudioKit.start()
+        
+        samplePlayer.play(from: Sample(44_100 * (0 % 26)),
+                          length: Sample(44_100))
+    }
+    
+    func getAudioFile(for note: String) -> String {
+        return note.lowercased()
+    }
 
 }
 
