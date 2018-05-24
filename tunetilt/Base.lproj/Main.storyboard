@@ -67,36 +67,6 @@
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="pfN-Yp-DNN">
                                 <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wH1-eB-IIe">
-                                        <rect key="frame" x="0.0" y="0.0" width="184" height="414"/>
-                                        <state key="normal" title="G"/>
-                                        <connections>
-                                            <action selector="onKeyTapped:" destination="Lpw-wQ-jI9" eventType="touchDown" id="Jtm-i0-THw"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U06-lD-SKo">
-                                        <rect key="frame" x="184" y="0.0" width="184" height="414"/>
-                                        <state key="normal" title="A"/>
-                                        <connections>
-                                            <action selector="onKeyTapped:" destination="Lpw-wQ-jI9" eventType="touchDown" id="gSN-oz-miS"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1W-Rb-bzE">
-                                        <rect key="frame" x="368" y="0.0" width="184" height="414"/>
-                                        <state key="normal" title="B"/>
-                                        <connections>
-                                            <action selector="onKeyTapped:" destination="Lpw-wQ-jI9" eventType="touchDown" id="jJd-Dt-Z7o"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgJ-DK-GWC">
-                                        <rect key="frame" x="552" y="0.0" width="184" height="414"/>
-                                        <state key="normal" title="C#"/>
-                                        <connections>
-                                            <action selector="onKeyTapped:" destination="Lpw-wQ-jI9" eventType="touchDown" id="S8G-Vc-Sep"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -108,6 +78,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kxA-7Q-DEZ"/>
                     </view>
+                    <connections>
+                        <outlet property="stack" destination="pfN-Yp-DNN" id="jJA-oO-jtc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g27-hW-8NE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -16,7 +16,6 @@
 		DD20DF3A20B1458300C7A9F4 /* AnimatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD20DF3720B1458300C7A9F4 /* AnimatorManager.swift */; };
 		DD20DF3B20B1458300C7A9F4 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD20DF3820B1458300C7A9F4 /* StorageManager.swift */; };
 		DD20DF3C20B1458300C7A9F4 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD20DF3920B1458300C7A9F4 /* AlertHelper.swift */; };
-		DD3A969620B41E1800465F8B /* AudioHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3A969520B41E1800465F8B /* AudioHelper.swift */; };
 		DD3A96A720B41ED000465F8B /* a#.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD3A969A20B41ED000465F8B /* a#.mp3 */; };
 		DD3A96A820B41ED000465F8B /* c#.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD3A969B20B41ED000465F8B /* c#.mp3 */; };
 		DD3A96A920B41ED000465F8B /* c.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD3A969C20B41ED000465F8B /* c.mp3 */; };
@@ -50,7 +49,6 @@
 		DD20DF3720B1458300C7A9F4 /* AnimatorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatorManager.swift; sourceTree = "<group>"; };
 		DD20DF3820B1458300C7A9F4 /* StorageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		DD20DF3920B1458300C7A9F4 /* AlertHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
-		DD3A969520B41E1800465F8B /* AudioHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioHelper.swift; sourceTree = "<group>"; };
 		DD3A969A20B41ED000465F8B /* a#.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "a#.mp3"; sourceTree = "<group>"; };
 		DD3A969B20B41ED000465F8B /* c#.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "c#.mp3"; sourceTree = "<group>"; };
 		DD3A969C20B41ED000465F8B /* c.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = c.mp3; sourceTree = "<group>"; };
@@ -116,7 +114,6 @@
 		DD20DF3D20B1458900C7A9F4 /* utils */ = {
 			isa = PBXGroup;
 			children = (
-				DD3A969520B41E1800465F8B /* AudioHelper.swift */,
 				DD20DF3920B1458300C7A9F4 /* AlertHelper.swift */,
 				DD20DF3720B1458300C7A9F4 /* AnimatorManager.swift */,
 				DD20DF3820B1458300C7A9F4 /* StorageManager.swift */,
@@ -156,10 +153,9 @@
 			children = (
 				DDCD987420AA946300B8D4D2 /* tunetilt */,
 				DDCD987320AA946300B8D4D2 /* Products */,
-				8CD493FFA076243926385286 /* Pods */,
-				BC35B13E46A190C914C2FD1A /* Frameworks */,
 				52E3C483203ACF7FED2A79E6 /* Pods */,
 				8020562B3EDAA78D7A1D59A1 /* Frameworks */,
+				DDFBD2A620B7029700B7DD38 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -198,6 +194,16 @@
 			path = controller;
 			sourceTree = "<group>";
 		};
+		DDFBD2A620B7029700B7DD38 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				AAC4895FE5CA958516676BB4 /* Pods_tunetilt.framework */,
+				F515D4D0A1E9943B7B2D0E62 /* Pods-tunetilt.debug.xcconfig */,
+				62AF78B66F6A7160C9A023ED /* Pods-tunetilt.release.xcconfig */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -206,7 +212,6 @@
 			buildConfigurationList = DDCD988420AA946400B8D4D2 /* Build configuration list for PBXNativeTarget "tunetilt" */;
 			buildPhases = (
 				C4ABFE696CA1D794810DC8F4 /* [CP] Check Pods Manifest.lock */,
-				31A3B9C6ECEE6248D653B36D /* [CP] Check Pods Manifest.lock */,
 				DDCD986E20AA946300B8D4D2 /* Sources */,
 				DDCD986F20AA946300B8D4D2 /* Frameworks */,
 				DDCD987020AA946300B8D4D2 /* Resources */,
@@ -348,7 +353,6 @@
 				C04290BC20B3ED3A00A95719 /* Notes.swift in Sources */,
 				DD20DF3C20B1458300C7A9F4 /* AlertHelper.swift in Sources */,
 				DDCD988920AA959900B8D4D2 /* GameController.swift in Sources */,
-				DD3A969620B41E1800465F8B /* AudioHelper.swift in Sources */,
 				DDCD987620AA946300B8D4D2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -503,6 +507,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				PODS_BUILD_DIR = "$(inherited)";
+				PODS_CONFIGURATION_BUILD_DIR = "$(inherited)";
+				PODS_PODFILE_DIR_PATH = "$(inherited)";
+				PODS_ROOT = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.blinking-light-studios.tunetilt";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -524,6 +532,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				PODS_BUILD_DIR = "$(inherited)";
+				PODS_CONFIGURATION_BUILD_DIR = "$(inherited)";
+				PODS_PODFILE_DIR_PATH = "$(inherited)";
+				PODS_ROOT = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.blinking-light-studios.tunetilt";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
