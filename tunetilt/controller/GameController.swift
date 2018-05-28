@@ -9,35 +9,75 @@
 import UIKit
 import AudioKit
 
-let 🎼 = "hi"
+let 🎼 = ["c", "d", "e", "f", "g", "a", "b"]
 
-class GameController: UIViewController {
+class GameController: UIViewController, KeyDelegate {
+    
+    // Dimensions
+    var keySize: CGFloat?
+    var allowableX: UInt32?
+    var allowableY: UInt32?
     
     // Fields
     let songId: String? = "1987429870976"
-    let sequence: [String]? = ["a", "b", "c", "a#"]
-    
-    // Outlets
-    @IBOutlet weak var stack: UIStackView!
+    let sequence: [String]? = ["a", "b", "c", "a#", "d", "d#", "f", "g", "e", "c#", "f#", "g#"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Set the dimensions
+        keySize = self.view.bounds.size.width/8
+        allowableX = UInt32(self.view.bounds.size.width) - UInt32(keySize!)
+        allowableY = UInt32(self.view.bounds.size.height) - UInt32(keySize!)
+        
         if let notes: [String] = sequence {
             for note in notes {
-                let button: UIButton = UIButton()
-                button.titleLabel?.text = note
-                button.setTitle(note, for: .normal)
-                button.addTarget(self, action: #selector(onKeyTapped(_:)), for: .touchUpInside)
-                button.backgroundColor = UIColor.black
-                stack.addArrangedSubview(button)
+                addKey(for: note)
             }
         }
     }
     
-    @IBAction @objc func onKeyTapped(_ sender: UIButton) {
-        let note: String = sender.titleLabel!.text!.lowercased()
+    func addKey(for note: String) {
+        // Create the view at a random location in the allowable bounds
+        let randPosX = getKeyXPos(for: note)
+        let randPosY = getKeyYPos(for: note)
         
+        // Create the view at that location
+        let key: Key = Key(frame: CGRect(x: randPosX, y: randPosY, width: keySize!, height: keySize!))
+        
+        key.setNote(to: note)
+        
+        // Set the delegate
+        key.delegate = self
+        
+        // Add the pong as a subview and register it up with the animator
+        self.view.addSubview(key)
+    }
+    
+    func getKeyXPos(for note: String) -> CGFloat {
+        let position: Int = 🎼.index(of: String(note.first!))!
+        let keyWidth: Float = Float(allowableX!) / 6.0
+        let originalPos: Float = Float(keyWidth * position + keyWidth / 2)
+        return CGFloat(originalPos - (note.last == "#" ? 0 : keyWidth / 2))
+    }
+    
+    func getKeyYPos(for note: String) -> CGFloat {
+        let halfY = allowableY!/2
+        let keyHeight: UInt32 = UInt32(keySize! / 2)
+        if note.last == "#" {
+            var boundedVal = arc4random_uniform(halfY)
+            if boundedVal >= halfY {
+                boundedVal -= keyHeight
+            }
+            return CGFloat(boundedVal)
+        }
+        else {
+            let boundedVal = arc4random_uniform(halfY - keyHeight) + keyHeight
+            return CGFloat(boundedVal + halfY)
+        }
+    }
+    
+    func onKeyTapped(_ note: String) {
         do {
             try play(audio: getAudioFile(for: note))
         } catch {

@@ -64,23 +64,9 @@
                     <view key="view" contentMode="scaleToFill" id="GdL-Be-OJZ">
                         <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="pfN-Yp-DNN">
-                                <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="kxA-7Q-DEZ" firstAttribute="trailing" secondItem="pfN-Yp-DNN" secondAttribute="trailing" id="9cf-Rm-vqd"/>
-                            <constraint firstItem="pfN-Yp-DNN" firstAttribute="top" secondItem="kxA-7Q-DEZ" secondAttribute="top" id="a08-yB-db0"/>
-                            <constraint firstItem="pfN-Yp-DNN" firstAttribute="leading" secondItem="kxA-7Q-DEZ" secondAttribute="leading" id="chP-vq-HZC"/>
-                            <constraint firstItem="kxA-7Q-DEZ" firstAttribute="bottom" secondItem="pfN-Yp-DNN" secondAttribute="bottom" id="uF6-X9-FE7"/>
-                        </constraints>
+                        <color key="backgroundColor" red="1" green="0.77721051252565365" blue="0.50393203300556977" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="kxA-7Q-DEZ"/>
                     </view>
-                    <connections>
-                        <outlet property="stack" destination="pfN-Yp-DNN" id="jJA-oO-jtc"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g27-hW-8NE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

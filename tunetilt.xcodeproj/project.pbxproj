@@ -12,6 +12,7 @@
 		C04290B420B3ECD200A95719 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C04290B320B3ECD200A95719 /* GoogleService-Info.plist */; };
 		C04290B820B3ECEA00A95719 /* SequencesStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04290B720B3ECEA00A95719 /* SequencesStorage.swift */; };
 		C04290BC20B3ED3A00A95719 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04290BB20B3ED3A00A95719 /* Notes.swift */; };
+		DD18F86F20BB92F8003773A5 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD18F86E20BB92F8003773A5 /* Key.swift */; };
 		DD20DF3620B13E8000C7A9F4 /* SongSelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD20DF3520B13E7F00C7A9F4 /* SongSelectionController.swift */; };
 		DD20DF3A20B1458300C7A9F4 /* AnimatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD20DF3720B1458300C7A9F4 /* AnimatorManager.swift */; };
 		DD20DF3B20B1458300C7A9F4 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD20DF3820B1458300C7A9F4 /* StorageManager.swift */; };
@@ -45,6 +46,7 @@
 		C04290BB20B3ED3A00A95719 /* Notes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
 		C59B65FE3C31E015FF53A99A /* Pods_tunetilt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tunetilt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D57399A5D189BC39A1680677 /* Pods-tunetilt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tunetilt.release.xcconfig"; path = "Pods/Target Support Files/Pods-tunetilt/Pods-tunetilt.release.xcconfig"; sourceTree = "<group>"; };
+		DD18F86E20BB92F8003773A5 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 		DD20DF3520B13E7F00C7A9F4 /* SongSelectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongSelectionController.swift; sourceTree = "<group>"; };
 		DD20DF3720B1458300C7A9F4 /* AnimatorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatorManager.swift; sourceTree = "<group>"; };
 		DD20DF3820B1458300C7A9F4 /* StorageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
@@ -111,6 +113,14 @@
 			name = NoteStorage;
 			sourceTree = "<group>";
 		};
+		DD18F86D20BB929D003773A5 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				DD18F86E20BB92F8003773A5 /* Key.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		DD20DF3D20B1458900C7A9F4 /* utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +183,7 @@
 				C04290BD20B3EE6E00A95719 /* NoteStorage */,
 				DD20DF3D20B1458900C7A9F4 /* utils */,
 				DDCD988720AA955E00B8D4D2 /* controller */,
+				DD18F86D20BB929D003773A5 /* view */,
 				DDCD987520AA946300B8D4D2 /* AppDelegate.swift */,
 				DDCD987920AA946300B8D4D2 /* Main.storyboard */,
 				DDCD987C20AA946400B8D4D2 /* Assets.xcassets */,
@@ -346,6 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDCD987820AA946300B8D4D2 /* ViewController.swift in Sources */,
+				DD18F86F20BB92F8003773A5 /* Key.swift in Sources */,
 				DD20DF3A20B1458300C7A9F4 /* AnimatorManager.swift in Sources */,
 				C04290B820B3ECEA00A95719 /* SequencesStorage.swift in Sources */,
 				DD20DF3620B13E8000C7A9F4 /* SongSelectionController.swift in Sources */,
