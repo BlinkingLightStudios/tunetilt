@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A95C12D9E8598A8C9927C9FA /* Pods_tunetilt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC4895FE5CA958516676BB4 /* Pods_tunetilt.framework */; };
-		BB786E1CA8E5DC113989A074 /* Pods_tunetilt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C59B65FE3C31E015FF53A99A /* Pods_tunetilt.framework */; };
 		C04290B420B3ECD200A95719 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C04290B320B3ECD200A95719 /* GoogleService-Info.plist */; };
 		C04290B820B3ECEA00A95719 /* SequencesStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04290B720B3ECEA00A95719 /* SequencesStorage.swift */; };
 		C04290BC20B3ED3A00A95719 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04290BB20B3ED3A00A95719 /* Notes.swift */; };
@@ -80,7 +79,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A95C12D9E8598A8C9927C9FA /* Pods_tunetilt.framework in Frameworks */,
-				BB786E1CA8E5DC113989A074 /* Pods_tunetilt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,7 +242,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Blinking Light Studios";
 				TargetAttributes = {
 					DDCD987120AA946300B8D4D2 = {
