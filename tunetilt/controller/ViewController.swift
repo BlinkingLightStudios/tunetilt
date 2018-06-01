@@ -9,18 +9,18 @@
 import UIKit
 import Firebase
 class ViewController: UIViewController {
+    let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Sequences1.plist")
+//    var Thenote = [String : Array<Any>]()
+//    var a = [AnyObject]()
     var db: Firestore!
-    var newNote = Notes()
-    var storage = SequencesStorage()
+    var newNote = [Song]()
+    var storage = SongsStorage()
     override func viewDidLoad() {
         super.viewDidLoad()
         readNotes()
         // Do any additional setup after loading the view, typically from a nib.
     }
-override func viewDidDisappear(_ animated: Bool) {
-    storage.loadData()
-    print("The sequences is \(self.newNote.notes)")
-}
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -34,15 +34,23 @@ override func viewDidDisappear(_ animated: Bool) {
                 print("Error getting documents: \(err)")
             } else {
                 for document in querySnapshot!.documents {
-                    if let name = document.data()["notes1"] as? [String] {
-                        self.newNote.notes = name
-                        self.storage.saveData(theNote: self.newNote)
-                    }
+                    let id = document.documentID
+                        if let note = document.data()["notes"] as? [String]{
+                            if let name = document.data()["name"] as? String {
+                            let newItem = Song()
+                                print(id)
+                            newItem.id = id
+                            newItem.notes = note
+                            newItem.name = name
+                            self.newNote.append(newItem)
+                            self.storage.saveData(theNote: self.newNote)
+                            }
+                        }   
                 }
             }
         }
-        
     }
+
 
 }
 

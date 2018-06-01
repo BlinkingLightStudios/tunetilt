@@ -7,6 +7,8 @@
 //
 
 import Foundation
-class Notes: Codable {
+class Song: Codable {
+    var id: String = ""
     var notes: [String] = [""]
+    var name: String = ""
 }

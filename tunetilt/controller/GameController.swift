@@ -19,8 +19,8 @@ class GameController: UIViewController, KeyDelegate {
     var allowableY: UInt32?
     
     // Fields
-    let songId: String? = "1987429870976"
-    let sequence: [String]? = ["a", "a", "b"]
+    var song: Song?
+    var sequence: [String] = [String]()
     var playedSequence: [String] = [String]()
     
     override func viewDidLoad() {
@@ -31,10 +31,9 @@ class GameController: UIViewController, KeyDelegate {
         allowableX = UInt32(self.view.bounds.size.width) - UInt32(keySize!)
         allowableY = UInt32(self.view.bounds.size.height) - UInt32(keySize!)
         
-        if let notes: [String] = sequence {
-            for note in notes {
-                addKey(for: note)
-            }
+        sequence = song!.notes
+        for note in sequence {
+            addKey(for: note)
         }
     }
     
@@ -109,7 +108,7 @@ class GameController: UIViewController, KeyDelegate {
     }
     
     private func checkWin() {
-        if playedSequence.elementsEqual(sequence!) {
+        if playedSequence.elementsEqual(sequence) {
             print("GAME IS WON")
         }
     }

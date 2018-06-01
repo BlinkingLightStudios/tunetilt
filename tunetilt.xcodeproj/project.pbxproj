@@ -10,7 +10,6 @@
 		A95C12D9E8598A8C9927C9FA /* Pods_tunetilt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC4895FE5CA958516676BB4 /* Pods_tunetilt.framework */; };
 		C04290B420B3ECD200A95719 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C04290B320B3ECD200A95719 /* GoogleService-Info.plist */; };
 		C04290B820B3ECEA00A95719 /* SequencesStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04290B720B3ECEA00A95719 /* SequencesStorage.swift */; };
-		C04290BC20B3ED3A00A95719 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04290BB20B3ED3A00A95719 /* Notes.swift */; };
 		DD18F86F20BB92F8003773A5 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD18F86E20BB92F8003773A5 /* Key.swift */; };
 		DD20DF3620B13E8000C7A9F4 /* SongSelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD20DF3520B13E7F00C7A9F4 /* SongSelectionController.swift */; };
 		DD20DF3A20B1458300C7A9F4 /* AnimatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD20DF3720B1458300C7A9F4 /* AnimatorManager.swift */; };
@@ -28,6 +27,7 @@
 		DD3A96B020B41ED000465F8B /* g.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD3A96A320B41ED000465F8B /* g.mp3 */; };
 		DD3A96B120B41ED000465F8B /* f.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD3A96A420B41ED000465F8B /* f.mp3 */; };
 		DD3A96B220B41ED000465F8B /* a.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD3A96A520B41ED000465F8B /* a.mp3 */; };
+		DDAF537420C17E7400738BE8 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAF537320C17E7300738BE8 /* Song.swift */; };
 		DDCD987620AA946300B8D4D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCD987520AA946300B8D4D2 /* AppDelegate.swift */; };
 		DDCD987820AA946300B8D4D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCD987720AA946300B8D4D2 /* ViewController.swift */; };
 		DDCD987B20AA946300B8D4D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDCD987920AA946300B8D4D2 /* Main.storyboard */; };
@@ -42,7 +42,6 @@
 		AE03A4768AB5555D6C668A55 /* Pods-tunetilt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tunetilt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tunetilt/Pods-tunetilt.debug.xcconfig"; sourceTree = "<group>"; };
 		C04290B320B3ECD200A95719 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C04290B720B3ECEA00A95719 /* SequencesStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequencesStorage.swift; sourceTree = "<group>"; };
-		C04290BB20B3ED3A00A95719 /* Notes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
 		C59B65FE3C31E015FF53A99A /* Pods_tunetilt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tunetilt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D57399A5D189BC39A1680677 /* Pods-tunetilt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tunetilt.release.xcconfig"; path = "Pods/Target Support Files/Pods-tunetilt/Pods-tunetilt.release.xcconfig"; sourceTree = "<group>"; };
 		DD18F86E20BB92F8003773A5 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
@@ -62,6 +61,7 @@
 		DD3A96A320B41ED000465F8B /* g.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = g.mp3; sourceTree = "<group>"; };
 		DD3A96A420B41ED000465F8B /* f.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = f.mp3; sourceTree = "<group>"; };
 		DD3A96A520B41ED000465F8B /* a.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = a.mp3; sourceTree = "<group>"; };
+		DDAF537320C17E7300738BE8 /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		DDCD987220AA946300B8D4D2 /* tunetilt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tunetilt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDCD987520AA946300B8D4D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDCD987720AA946300B8D4D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 		C04290BD20B3EE6E00A95719 /* NoteStorage */ = {
 			isa = PBXGroup;
 			children = (
-				C04290BB20B3ED3A00A95719 /* Notes.swift */,
+				DDAF537320C17E7300738BE8 /* Song.swift */,
 				C04290B720B3ECEA00A95719 /* SequencesStorage.swift */,
 			);
 			name = NoteStorage;
@@ -360,9 +360,9 @@
 				C04290B820B3ECEA00A95719 /* SequencesStorage.swift in Sources */,
 				DD20DF3620B13E8000C7A9F4 /* SongSelectionController.swift in Sources */,
 				DD20DF3B20B1458300C7A9F4 /* StorageManager.swift in Sources */,
-				C04290BC20B3ED3A00A95719 /* Notes.swift in Sources */,
 				DD20DF3C20B1458300C7A9F4 /* AlertHelper.swift in Sources */,
 				DDCD988920AA959900B8D4D2 /* GameController.swift in Sources */,
+				DDAF537420C17E7400738BE8 /* Song.swift in Sources */,
 				DDCD987620AA946300B8D4D2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

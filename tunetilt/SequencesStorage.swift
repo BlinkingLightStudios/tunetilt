@@ -8,13 +8,13 @@
 
 import Foundation
 
-class SequencesStorage {
+class SongsStorage {
 
-    var note = Notes()
+    var note = Song()
     let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Sequences.plist")
     
     
-    func saveData(theNote: Notes){
+    func saveData(theNote: [Song]){
         let encoder = PropertyListEncoder()
         do{
             print(dataFilePath!)
@@ -29,11 +29,11 @@ class SequencesStorage {
     func loadData()  {
         if let data = try? Data(contentsOf: dataFilePath!){
             let decoder = PropertyListDecoder()
-            do{
-                note = try decoder.decode(Notes.self, from: data)
+            do {
+                note = try decoder.decode(Song.self, from: data)
             }
-            catch{
-                print("Error loading data \(error)")
+            catch {
+                print("Error loading data: \(error)")
             }
         }
  }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
@@ -110,7 +110,7 @@
                                                             <rect key="frame" x="490.66666666666669" y="0.0" width="245.33333333333331" height="43.666666666666664"/>
                                                             <state key="normal" title="Play"/>
                                                             <connections>
-                                                                <segue destination="Lpw-wQ-jI9" kind="show" id="jPm-W4-nDH"/>
+                                                                <segue destination="Lpw-wQ-jI9" kind="show" identifier="GamePlay" id="jPm-W4-nDH"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
