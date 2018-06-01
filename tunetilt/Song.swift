@@ -7,7 +7,8 @@
 //
 
 import Foundation
-class Song: Codable {
+
+struct Song: Codable {
     var id: String = ""
     var notes: [String] = [""]
     var name: String = ""

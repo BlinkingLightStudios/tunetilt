@@ -9,28 +9,26 @@
 import UIKit
 
 class SongSelectionController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    var song = [Song]()
-    var sequenceObject = Song()
-    var valueToPass = [String]()
-    var idToPass = String()
-    let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Sequences.plist")
     
+    // Data fields
+    var songs = [Song]()
+    var selectedSong = Song()
+    let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Sequences.plist")
     let storage = SongsStorage()
+    
     // Outlet fields
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-loadData()
-        print("Song name is ()")
+        loadData()
         // Set up the table view for callbacks
         tableView.dataSource = self
         tableView.delegate = self
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return song.count
+        return songs.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -41,9 +39,8 @@ loadData()
         let songName: UILabel = cell.viewWithTag(3) as! UILabel
         let difficulty: UILabel = cell.viewWithTag(1) as! UILabel
 //        let playButton: UIButton = cell.viewWithTag(2) as! UIButton
-        let item = song[indexPath.row]
-        let show = item.notes.joined(separator: " ")
-            songName.text = "\(show)"
+        let item = songs[indexPath.row]
+        songName.text = item.name
         
         difficulty.text = "Hard"
 //        playButton.setTitle("Play", for: UIControlState())
@@ -60,16 +57,13 @@ loadData()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        sequenceObject.notes = song[indexPath.row].notes
-        sequenceObject.id = song[indexPath.row].id
-        sequenceObject.name = song[indexPath.row].name
-        
+        selectedSong = songs[indexPath.row]
         performSegue(withIdentifier: "GamePlay", sender: self)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let GameController = segue.destination as? GameController else { return }
-        GameController.song = sequenceObject
+        GameController.song = selectedSong
     }
     
 
@@ -78,7 +72,7 @@ loadData()
         if let data = try? Data(contentsOf: dataFilePath!){
             let decoder = PropertyListDecoder()
             do{
-                song = try decoder.decode([Song].self, from: data)
+                songs = try decoder.decode([Song].self, from: data)
             }
             catch{
                 print("This is \(error)")

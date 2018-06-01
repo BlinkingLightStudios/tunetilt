@@ -35,13 +35,9 @@ class ViewController: UIViewController {
             } else {
                 for document in querySnapshot!.documents {
                     let id = document.documentID
-                        if let note = document.data()["notes"] as? [String]{
+                        if let notes = document.data()["notes"] as? [String]{
                             if let name = document.data()["name"] as? String {
-                            let newItem = Song()
-                                print(id)
-                            newItem.id = id
-                            newItem.notes = note
-                            newItem.name = name
+                            let newItem = Song(id: id, notes: notes, name: name)
                             self.newNote.append(newItem)
                             self.storage.saveData(theNote: self.newNote)
                             }

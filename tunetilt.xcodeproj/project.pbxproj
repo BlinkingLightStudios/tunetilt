@@ -102,13 +102,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C04290BD20B3EE6E00A95719 /* NoteStorage */ = {
+		C04290BD20B3EE6E00A95719 /* model */ = {
 			isa = PBXGroup;
 			children = (
 				DDAF537320C17E7300738BE8 /* Song.swift */,
-				C04290B720B3ECEA00A95719 /* SequencesStorage.swift */,
 			);
-			name = NoteStorage;
+			name = model;
 			sourceTree = "<group>";
 		};
 		DD18F86D20BB929D003773A5 /* view */ = {
@@ -122,6 +121,7 @@
 		DD20DF3D20B1458900C7A9F4 /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				C04290B720B3ECEA00A95719 /* SequencesStorage.swift */,
 				DD20DF3920B1458300C7A9F4 /* AlertHelper.swift */,
 				DD20DF3720B1458300C7A9F4 /* AnimatorManager.swift */,
 				DD20DF3820B1458300C7A9F4 /* StorageManager.swift */,
@@ -178,7 +178,7 @@
 		DDCD987420AA946300B8D4D2 /* tunetilt */ = {
 			isa = PBXGroup;
 			children = (
-				C04290BD20B3EE6E00A95719 /* NoteStorage */,
+				C04290BD20B3EE6E00A95719 /* model */,
 				DD20DF3D20B1458900C7A9F4 /* utils */,
 				DDCD988720AA955E00B8D4D2 /* controller */,
 				DD18F86D20BB929D003773A5 /* view */,
