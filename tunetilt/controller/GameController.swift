@@ -20,7 +20,7 @@ class GameController: UIViewController, KeyDelegate {
     
     // Fields
     let songId: String? = "1987429870976"
-    let sequence: [String]? = ["a", "b", "c", "a#", "d", "d#", "f", "g", "e", "c#", "f#", "g#"]
+    let sequence: [String]? = ["a", "a", "b", "c", "a#", "d", "d#", "f", "g", "e", "c#", "f#", "g#"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,20 +38,38 @@ class GameController: UIViewController, KeyDelegate {
     }
     
     func addKey(for note: String) {
-        // Create the view at a random location in the allowable bounds
-        let randPosX = getKeyXPos(for: note)
-        let randPosY = getKeyYPos(for: note)
-        
-        // Create the view at that location
-        let key: Key = Key(frame: CGRect(x: randPosX, y: randPosY, width: keySize!, height: keySize!))
-        
-        key.setNote(to: note)
-        
-        // Set the delegate
-        key.delegate = self
-        
-        // Add the pong as a subview and register it up with the animator
-        self.view.addSubview(key)
+        if let key = self.view.viewWithTag(getTag(for: note)) as? Key {
+            key.charges += 1
+        }
+        else {
+            // Create the view at a random location in the allowable bounds
+            let randPosX = getKeyXPos(for: note)
+            let randPosY = getKeyYPos(for: note)
+            
+            // Create the view at that location
+            let key: Key = Key(frame: CGRect(x: randPosX, y: randPosY, width: keySize!, height: keySize!))
+            
+            // Add field values
+            key.setNote(to: note)
+            key.delegate = self
+            key.tag = getTag(for: note)
+            
+            // Add the pong as a subview and register it up with the animator
+            self.view.addSubview(key)
+        }
+    }
+    
+    private func remove(key: Key) {
+        // Reduce the charges left
+        key.charges -= 1
+        if key.charges == 0 {
+            // Remove it
+            key.removeFromSuperview()
+        }
+    }
+    
+    private func getTag(for note: String) -> Int {
+        return 🎼.index(of: String(note.first!))! + 100 + (note.last == "#" ? 100 : 0)
     }
     
     func getKeyXPos(for note: String) -> CGFloat {
@@ -77,9 +95,10 @@ class GameController: UIViewController, KeyDelegate {
         }
     }
     
-    func onKeyTapped(_ note: String) {
+    func onKeyTapped(_ key: Key) {
         do {
-            try play(audio: getAudioFile(for: note))
+            try play(audio: getAudioFile(for: key.titleLabel!.text!))
+            remove(key: key)
         } catch {
             print("error playing file")
         }

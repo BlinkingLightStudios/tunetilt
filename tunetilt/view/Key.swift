@@ -11,6 +11,7 @@ import UIKit
 class Key: UIButton {
     
     // Fields
+    var charges: Int = 1
     weak var delegate: KeyDelegate?
     
     override init(frame: CGRect) {
@@ -46,11 +47,11 @@ class Key: UIButton {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         // Send touch event to deleagte callback
-        delegate?.onKeyTapped(titleLabel!.text!)
+        delegate?.onKeyTapped(self)
     }
 }
 
 // The pong's delegate protocol
 protocol KeyDelegate: AnyObject {
-    func onKeyTapped(_ note: String)
+    func onKeyTapped(_ key: Key)
 }
