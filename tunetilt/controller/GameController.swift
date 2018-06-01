@@ -20,7 +20,8 @@ class GameController: UIViewController, KeyDelegate {
     
     // Fields
     let songId: String? = "1987429870976"
-    let sequence: [String]? = ["a", "a", "b", "c", "a#", "d", "d#", "f", "g", "e", "c#", "f#", "g#"]
+    let sequence: [String]? = ["a", "a", "b"]
+    var playedSequence: [String] = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -96,11 +97,20 @@ class GameController: UIViewController, KeyDelegate {
     }
     
     func onKeyTapped(_ key: Key) {
+        let note = key.titleLabel!.text!
         do {
-            try play(audio: getAudioFile(for: key.titleLabel!.text!))
+            playedSequence.append(note)
+            try play(audio: getAudioFile(for: note))
             remove(key: key)
+            checkWin()
         } catch {
-            print("error playing file")
+            print("Error playing file")
+        }
+    }
+    
+    private func checkWin() {
+        if playedSequence.elementsEqual(sequence!) {
+            print("GAME IS WON")
         }
     }
     
