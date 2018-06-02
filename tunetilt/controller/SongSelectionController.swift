@@ -43,22 +43,13 @@ class SongSelectionController: UIViewController, UITableViewDataSource, UITableV
         songName.text = item.name
         
         difficulty.text = "Hard"
-//        playButton.setTitle("Play", for: UIControlState())
-        
-            // Make the background colour alternate
-        if indexPath.row % 2 == 1 {
-            cell.backgroundColor = UIColor(red: 255/255.0, green: 255/255.0, blue: 255/255.0, alpha: 0.1)
-        }
-        else {
-            cell.backgroundColor = UIColor.clear
-        }
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedSong = songs[indexPath.row]
-        performSegue(withIdentifier: "GamePlay", sender: self)
+        performSegue(withIdentifier: "playGame", sender: self)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
