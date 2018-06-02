@@ -9,6 +9,7 @@
 import UIKit
 
 class LeaderboardRow: UITableViewCell {
+    
     @IBOutlet weak var player: UILabel!
     @IBOutlet weak var score: UILabel!
     override func awakeFromNib() {

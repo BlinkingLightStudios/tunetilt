@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A306A01DA1808F777721166 /* Pods_tunetilt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C59B65FE3C31E015FF53A99A /* Pods_tunetilt.framework */; };
 		A95C12D9E8598A8C9927C9FA /* Pods_tunetilt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC4895FE5CA958516676BB4 /* Pods_tunetilt.framework */; };
 		C04290B420B3ECD200A95719 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C04290B320B3ECD200A95719 /* GoogleService-Info.plist */; };
 		C04290B820B3ECEA00A95719 /* SequencesStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04290B720B3ECEA00A95719 /* SequencesStorage.swift */; };
@@ -94,6 +95,7 @@
 			files = (
 				A95C12D9E8598A8C9927C9FA /* Pods_tunetilt.framework in Frameworks */,
 				DC51890320C22D62008E16A2 /* GameKit.framework in Frameworks */,
+				1A306A01DA1808F777721166 /* Pods_tunetilt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +286,9 @@
 							com.apple.GameCenter = {
 								enabled = 1;
 							};
+							com.apple.GameCenter.iOS = {
+								enabled = 1;
+							};
 						};
 					};
 				};
@@ -395,7 +400,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC5188FF20C223A7008E16A2 /* Score.swift in Sources */,
-				DDCD987820AA946300B8D4D2 /* ViewController.swift in Sources */,
 				DDCD987820AA946300B8D4D2 /* HomeViewController.swift in Sources */,
 				DD18F86F20BB92F8003773A5 /* Key.swift in Sources */,
 				DD20DF3A20B1458300C7A9F4 /* AnimatorManager.swift in Sources */,
@@ -563,9 +567,8 @@
 				PODS_CONFIGURATION_BUILD_DIR = "$(inherited)";
 				PODS_PODFILE_DIR_PATH = "$(inherited)";
 				PODS_ROOT = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.blinking-light-studios.tunetilt";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.blinking-light-studios.tunetilt2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "tunetilt/controller/tunetilt-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -588,9 +591,8 @@
 				PODS_CONFIGURATION_BUILD_DIR = "$(inherited)";
 				PODS_PODFILE_DIR_PATH = "$(inherited)";
 				PODS_ROOT = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.blinking-light-studios.tunetilt";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.blinking-light-studios.tunetilt2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "tunetilt/controller/tunetilt-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

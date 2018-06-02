@@ -14,6 +14,7 @@ class SongSelectionController: UIViewController, UITableViewDataSource, UITableV
     var songs = [Song]()
     var selectedSong = Song()
     var buttontext = "Play"
+    var player: String?
     let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Sequences.plist")
     let storage = SongsStorage()
     
@@ -42,19 +43,19 @@ class SongSelectionController: UIViewController, UITableViewDataSource, UITableV
         // Get and set the labels
         let songName: UILabel = cell.viewWithTag(3) as! UILabel
         let difficulty: UILabel = cell.viewWithTag(1) as! UILabel
-        button.tag = indexPath.row
-        button.addTarget(self, action: "buttonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
         let playButton: UIButton = cell.viewWithTag(2) as! UIButton
         let item = songs[indexPath.row]
         songName.text = item.name
         difficulty.text = "Hard"
+      
         if (buttonswitch.isOn){
             playButton.setTitle("Play", for: UIControlState())
+            
         }
         else{
             playButton.setTitle("Leaderboard", for: UIControlState())
+            
         }
-        
 //        playButton.setTitle("Play", for: UIControlState())
         
             // Make the background colour alternate
@@ -68,13 +69,18 @@ class SongSelectionController: UIViewController, UITableViewDataSource, UITableV
         return cell
     }
     
+    @IBAction func unwind(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedSong = songs[indexPath.row]
         if (!buttonswitch.isOn){
             performSegue(withIdentifier: "Leaderboard", sender: self)
         }
         else{
-            performSegue(withIdentifier: "GamePlay", sender: self)
+            performSegue(withIdentifier: "playGame", sender: self)
         }
         
     }
@@ -82,11 +88,12 @@ class SongSelectionController: UIViewController, UITableViewDataSource, UITableV
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier=="Leaderboard"){
             guard let LeaderboardController = segue.destination as? LeaderboardController else { return }
-            LeaderboardController.song = selectedSong
+            LeaderboardController.song = selectedSong.id
         }
         else{
             guard let GameController = segue.destination as? GameController else { return }
             GameController.song = selectedSong
+            GameController.player = player
         }
         
     }

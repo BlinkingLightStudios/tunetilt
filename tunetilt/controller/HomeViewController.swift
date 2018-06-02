@@ -11,6 +11,8 @@ import Firebase
 import GameKit
 class ViewController: UIViewController, GKGameCenterControllerDelegate {
     var gcEnabled = Bool()
+    
+
     func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
         
     }
@@ -18,19 +20,31 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
     var db: Firestore!
     var newNote = [Song]()
     var storage = SongsStorage()
+    var player: String?
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        player = "Guest"
         authenticatePlayer()
         readNotes()
-        styleButton()
+        //styleButton()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier=="SongSelect"){
+            guard let SongSelectionController = segue.destination as? SongSelectionController else { return }
+            SongSelectionController.player = player
+        }
+        
+    }
+    
+/*
     func styleButton() {
         playButton.layer.cornerRadius = playButton.frame.width / 2
         playButton.layer.borderColor = UIColor.black.cgColor
         playButton.layer.masksToBounds = true;
-    }
+    }*/
     
     func authenticatePlayer() {
         let localPlayer: GKLocalPlayer = GKLocalPlayer.localPlayer()
@@ -41,7 +55,6 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
                 self.present(ViewController!, animated: true, completion: nil)
             } else if (localPlayer.isAuthenticated) {
                 self.gcEnabled = true
-                print(localPlayer.alias!)
             } else {
                 // 3. Game center is not enabled on the users device
                 self.gcEnabled = false
@@ -49,6 +62,7 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
                 print(error!)
             }
         }
+        player = localPlayer.alias!
     }
 
     func readNotes(){

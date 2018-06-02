@@ -13,7 +13,7 @@ class GameController: UIViewController, KeyDelegate {
     
     // Constants
     let 🎼 = ["c", "d", "e", "f", "g", "a", "b"]
-    
+    var player: String?
     // Dimensions
     var keySize: CGFloat?
     var allowableX: UInt32?
@@ -111,6 +111,8 @@ class GameController: UIViewController, KeyDelegate {
     private func checkWin() {
         if playedSequence.elementsEqual(sequence) {
             print("GAME IS WON")
+            let s = Score()
+           // s.save(player: player, score: <#T##Double#>, tune: <#T##String#>)
         }
     }
     

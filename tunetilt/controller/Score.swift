@@ -11,13 +11,22 @@ import CoreData
 import UIKit
 
 class Score{
+
+    lazy var persistentContainer: NSPersistentContainer = {
+        
+        let container = NSPersistentContainer(name: "TuneTilt")
+        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+            if let error = error {
+                
+                fatalError("Unresolved error, \((error as NSError).userInfo)")
+            }
+        })
+        return container
+    }()
+    
     public func save(player: String, score: Double, tune: String){
-        guard let appDelegate =
-            UIApplication.shared.delegate as? AppDelegate else {
-                return
-        }
         let managedContext =
-            appDelegate.persistentContainer.viewContext
+            persistentContainer.viewContext
         
         let rows: [NSManagedObject] = get(tune: tune)
         for row in rows{
@@ -54,13 +63,9 @@ class Score{
     
     public func get(tune: String) -> [NSManagedObject]{
         var rows: [NSManagedObject] = []
-        guard let appDelegate =
-            UIApplication.shared.delegate as? AppDelegate else {
-                return rows
-        }
         
         let managedContext =
-            appDelegate.persistentContainer.viewContext
+            persistentContainer.viewContext
         
         let fetchRequest =
             NSFetchRequest<NSManagedObject>(entityName: "Leaderboards")
@@ -79,23 +84,18 @@ class Score{
     
     public func getBest(player: String, tune: String) -> Double{
         var rows: [NSManagedObject] = []
-        guard let appDelegate =
-            UIApplication.shared.delegate as? AppDelegate else {
-                return 0
-        }
         
         let managedContext =
-            appDelegate.persistentContainer.viewContext
+            persistentContainer.viewContext
         
         let fetchRequest =
             NSFetchRequest<NSManagedObject>(entityName: "Leaderboards")
         fetchRequest.predicate = NSPredicate(format: "tune = %@", tune)
         fetchRequest.predicate = NSPredicate(format: "player = %@", player)
-        fetchRequest.sortDescriptors = [sort]
         
         do {
             rows = try managedContext.fetch(fetchRequest)
-            return rows[0].value(forKey: score) as! Double
+            return rows[0].value(forKey: "score") as! Double
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
         }

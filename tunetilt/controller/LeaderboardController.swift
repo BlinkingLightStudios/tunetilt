@@ -12,15 +12,21 @@ import CoreData
 class LeaderboardController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet weak var leaderboard: UITableView!
-    var song: Song?
+    var song: String?
     var rows: [NSManagedObject] = []
     let scores = Score()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        rows = scores.get(tune: song)
+        rows = scores.get(tune: song!)
+        print(rows.count)
     }
     
+
+
+    @IBAction func unwind(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     
     
     override func didReceiveMemoryWarning() {
@@ -36,10 +42,9 @@ class LeaderboardController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let row = rows[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "leaderboardRows") as! LeaderboardRow
-        cell.player.text = row.value(forKey: "player") as? String
-        cell.score.text = row.value(forKey: "score") as? String
-        print(row.value(forKey: "score")!)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LeaderboardRow") as! LeaderboardRow
+        cell.player.text = row.value(forKey: "player") as! String
+        cell.score.text = String(row.value(forKey: "score") as! Double) + "s"
         return cell
     }
     
