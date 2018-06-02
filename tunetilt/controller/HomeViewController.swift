@@ -15,8 +15,6 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
         
     }
     let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Sequences1.plist")
-//    var Thenote = [String : Array<Any>]()
-//    var a = [AnyObject]()
     var db: Firestore!
     var newNote = [Song]()
     var storage = SongsStorage()
@@ -25,13 +23,13 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
         super.viewDidLoad()
         authenticatePlayer()
         readNotes()
-        // Do any additional setup after loading the view, typically from a nib.
+        styleButton()
     }
-
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func styleButton() {
+        playButton.layer.cornerRadius = playButton.frame.width / 2
+        playButton.layer.borderColor = UIColor.black.cgColor
+        playButton.layer.masksToBounds = true;
     }
     
     func authenticatePlayer() {
@@ -61,13 +59,13 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
             } else {
                 for document in querySnapshot!.documents {
                     let id = document.documentID
-                        if let notes = document.data()["notes"] as? [String]{
-                            if let name = document.data()["name"] as? String {
-                            let newItem = Song(id: id, notes: notes, name: name)
-                            self.newNote.append(newItem)
-                            self.storage.saveData(theNote: self.newNote)
-                            }
-                        }   
+                    if let notes = document.data()["notes"] as? [String]{
+                        if let name = document.data()["name"] as? String {
+                        let newItem = Song(id: id, notes: notes, name: name)
+                        self.newNote.append(newItem)
+                        self.storage.saveData(theNote: self.newNote)
+                        }
+                    }
                 }
             }
         }

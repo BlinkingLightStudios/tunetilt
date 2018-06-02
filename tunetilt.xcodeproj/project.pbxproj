@@ -33,8 +33,10 @@
 		DD3A96B120B41ED000465F8B /* f.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD3A96A420B41ED000465F8B /* f.mp3 */; };
 		DD3A96B220B41ED000465F8B /* a.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD3A96A520B41ED000465F8B /* a.mp3 */; };
 		DDAF537420C17E7400738BE8 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAF537320C17E7300738BE8 /* Song.swift */; };
+		DDAF537820C231B000738BE8 /* GermaniaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDAF537720C231B000738BE8 /* GermaniaOne-Regular.ttf */; };
+		DDAF537C20C2427A00738BE8 /* launch.png in Resources */ = {isa = PBXBuildFile; fileRef = DDAF537B20C2427A00738BE8 /* launch.png */; };
 		DDCD987620AA946300B8D4D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCD987520AA946300B8D4D2 /* AppDelegate.swift */; };
-		DDCD987820AA946300B8D4D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCD987720AA946300B8D4D2 /* ViewController.swift */; };
+		DDCD987820AA946300B8D4D2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCD987720AA946300B8D4D2 /* HomeViewController.swift */; };
 		DDCD987B20AA946300B8D4D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDCD987920AA946300B8D4D2 /* Main.storyboard */; };
 		DDCD987D20AA946400B8D4D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDCD987C20AA946400B8D4D2 /* Assets.xcassets */; };
 		DDCD988020AA946400B8D4D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDCD987E20AA946400B8D4D2 /* LaunchScreen.storyboard */; };
@@ -72,9 +74,11 @@
 		DD3A96A420B41ED000465F8B /* f.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = f.mp3; sourceTree = "<group>"; };
 		DD3A96A520B41ED000465F8B /* a.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = a.mp3; sourceTree = "<group>"; };
 		DDAF537320C17E7300738BE8 /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		DDAF537720C231B000738BE8 /* GermaniaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "GermaniaOne-Regular.ttf"; path = "tunetilt/resource/GermaniaOne-Regular.ttf"; sourceTree = SOURCE_ROOT; };
+		DDAF537B20C2427A00738BE8 /* launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = launch.png; path = tunetilt/resource/launch.png; sourceTree = SOURCE_ROOT; };
 		DDCD987220AA946300B8D4D2 /* tunetilt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tunetilt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDCD987520AA946300B8D4D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DDCD987720AA946300B8D4D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DDCD987720AA946300B8D4D2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DDCD987A20AA946300B8D4D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DDCD987C20AA946400B8D4D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDCD987F20AA946400B8D4D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -168,6 +172,16 @@
 			path = notes;
 			sourceTree = "<group>";
 		};
+		DDAF537520C2318D00738BE8 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				DDAF537B20C2427A00738BE8 /* launch.png */,
+				DDAF537720C231B000738BE8 /* GermaniaOne-Regular.ttf */,
+			);
+			name = resource;
+			path = controller/resource;
+			sourceTree = "<group>";
+		};
 		DDCD986920AA946300B8D4D2 = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +207,7 @@
 				C04290BD20B3EE6E00A95719 /* model */,
 				DD20DF3D20B1458900C7A9F4 /* utils */,
 				DDCD988720AA955E00B8D4D2 /* controller */,
+				DDAF537520C2318D00738BE8 /* resource */,
 				DD18F86D20BB929D003773A5 /* view */,
 				DC5188FB20C22306008E16A2 /* TuneTilt.xcdatamodeld */,
 				DDCD987520AA946300B8D4D2 /* AppDelegate.swift */,
@@ -210,7 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				DDCD988820AA959900B8D4D2 /* GameController.swift */,
-				DDCD987720AA946300B8D4D2 /* ViewController.swift */,
+				DDCD987720AA946300B8D4D2 /* HomeViewController.swift */,
 				DD20DF3520B13E7F00C7A9F4 /* SongSelectionController.swift */,
 				DC5188F720C22200008E16A2 /* LeaderboardRow.swift */,
 				DC5188F920C22230008E16A2 /* LeaderboardController.swift */,
@@ -308,8 +323,10 @@
 				DD3A96A920B41ED000465F8B /* c.mp3 in Resources */,
 				DD3A96A720B41ED000465F8B /* a#.mp3 in Resources */,
 				DDCD988020AA946400B8D4D2 /* LaunchScreen.storyboard in Resources */,
+				DDAF537C20C2427A00738BE8 /* launch.png in Resources */,
 				C04290B420B3ECD200A95719 /* GoogleService-Info.plist in Resources */,
 				DDCD987D20AA946400B8D4D2 /* Assets.xcassets in Resources */,
+				DDAF537820C231B000738BE8 /* GermaniaOne-Regular.ttf in Resources */,
 				DDCD987B20AA946300B8D4D2 /* Main.storyboard in Resources */,
 				DD3A96AA20B41ED000465F8B /* b.mp3 in Resources */,
 			);
@@ -379,6 +396,7 @@
 			files = (
 				DC5188FF20C223A7008E16A2 /* Score.swift in Sources */,
 				DDCD987820AA946300B8D4D2 /* ViewController.swift in Sources */,
+				DDCD987820AA946300B8D4D2 /* HomeViewController.swift in Sources */,
 				DD18F86F20BB92F8003773A5 /* Key.swift in Sources */,
 				DD20DF3A20B1458300C7A9F4 /* AnimatorManager.swift in Sources */,
 				DC5188FA20C22230008E16A2 /* LeaderboardController.swift in Sources */,

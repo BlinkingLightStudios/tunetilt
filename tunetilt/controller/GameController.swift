@@ -9,9 +9,10 @@
 import UIKit
 import AudioKit
 
-let 🎼 = ["c", "d", "e", "f", "g", "a", "b"]
-
 class GameController: UIViewController, KeyDelegate {
+    
+    // Constants
+    let 🎼 = ["c", "d", "e", "f", "g", "a", "b"]
     
     // Dimensions
     var keySize: CGFloat?
@@ -98,8 +99,8 @@ class GameController: UIViewController, KeyDelegate {
     func onKeyTapped(_ key: Key) {
         let note = key.titleLabel!.text!
         do {
+            try play(audio: note.lowercased())
             playedSequence.append(note)
-            try play(audio: getAudioFile(for: note))
             remove(key: key)
             checkWin()
         } catch {
@@ -123,10 +124,6 @@ class GameController: UIViewController, KeyDelegate {
         
         samplePlayer.play(from: Sample(44_100 * (0 % 26)),
                           length: Sample(44_100))
-    }
-    
-    func getAudioFile(for note: String) -> String {
-        return note.lowercased()
     }
 
 }

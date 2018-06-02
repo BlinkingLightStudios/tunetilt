@@ -19,11 +19,11 @@ class Key: UIButton {
         super.init(frame: frame)
         
         // Set up default properties
-        self.layer.borderWidth = bounds.maxX/20
-        self.titleLabel!.adjustsFontSizeToFitWidth = true
+        self.layer.borderWidth = 3
         self.layer.cornerRadius = (bounds.maxX/2)
-        self.layer.borderColor = UIColor.black.cgColor
-        self.layer.masksToBounds = true;
+        self.layer.masksToBounds = true
+        self.layer.borderColor = UIColor.white.cgColor
+        self.titleLabel?.font =  UIFont(name: "GermaniaOne-Regular", size: bounds.maxX/2)
     }
     
     func setNote(to note: String) {
