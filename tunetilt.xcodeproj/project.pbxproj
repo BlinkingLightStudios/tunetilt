@@ -3,13 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		A95C12D9E8598A8C9927C9FA /* Pods_tunetilt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC4895FE5CA958516676BB4 /* Pods_tunetilt.framework */; };
 		C04290B420B3ECD200A95719 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C04290B320B3ECD200A95719 /* GoogleService-Info.plist */; };
 		C04290B820B3ECEA00A95719 /* SequencesStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04290B720B3ECEA00A95719 /* SequencesStorage.swift */; };
+		DC5188F820C22200008E16A2 /* LeaderboardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5188F720C22200008E16A2 /* LeaderboardRow.swift */; };
+		DC5188FA20C22230008E16A2 /* LeaderboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5188F920C22230008E16A2 /* LeaderboardController.swift */; };
+		DC5188FD20C22306008E16A2 /* TuneTilt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DC5188FB20C22306008E16A2 /* TuneTilt.xcdatamodeld */; };
+		DC5188FF20C223A7008E16A2 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5188FE20C223A7008E16A2 /* Score.swift */; };
+		DC51890320C22D62008E16A2 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC51890220C22D62008E16A2 /* GameKit.framework */; };
 		DD18F86F20BB92F8003773A5 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD18F86E20BB92F8003773A5 /* Key.swift */; };
 		DD20DF3620B13E8000C7A9F4 /* SongSelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD20DF3520B13E7F00C7A9F4 /* SongSelectionController.swift */; };
 		DD20DF3A20B1458300C7A9F4 /* AnimatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD20DF3720B1458300C7A9F4 /* AnimatorManager.swift */; };
@@ -44,6 +49,11 @@
 		C04290B720B3ECEA00A95719 /* SequencesStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequencesStorage.swift; sourceTree = "<group>"; };
 		C59B65FE3C31E015FF53A99A /* Pods_tunetilt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tunetilt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D57399A5D189BC39A1680677 /* Pods-tunetilt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tunetilt.release.xcconfig"; path = "Pods/Target Support Files/Pods-tunetilt/Pods-tunetilt.release.xcconfig"; sourceTree = "<group>"; };
+		DC5188F720C22200008E16A2 /* LeaderboardRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardRow.swift; sourceTree = "<group>"; };
+		DC5188F920C22230008E16A2 /* LeaderboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardController.swift; sourceTree = "<group>"; };
+		DC5188FC20C22306008E16A2 /* TuneTilt.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TuneTilt.xcdatamodel; sourceTree = "<group>"; };
+		DC5188FE20C223A7008E16A2 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		DC51890220C22D62008E16A2 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		DD18F86E20BB92F8003773A5 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 		DD20DF3520B13E7F00C7A9F4 /* SongSelectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongSelectionController.swift; sourceTree = "<group>"; };
 		DD20DF3720B1458300C7A9F4 /* AnimatorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatorManager.swift; sourceTree = "<group>"; };
@@ -79,6 +89,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A95C12D9E8598A8C9927C9FA /* Pods_tunetilt.framework in Frameworks */,
+				DC51890320C22D62008E16A2 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +108,7 @@
 		8020562B3EDAA78D7A1D59A1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DC51890220C22D62008E16A2 /* GameKit.framework */,
 				C59B65FE3C31E015FF53A99A /* Pods_tunetilt.framework */,
 			);
 			name = Frameworks;
@@ -182,6 +194,7 @@
 				DD20DF3D20B1458900C7A9F4 /* utils */,
 				DDCD988720AA955E00B8D4D2 /* controller */,
 				DD18F86D20BB929D003773A5 /* view */,
+				DC5188FB20C22306008E16A2 /* TuneTilt.xcdatamodeld */,
 				DDCD987520AA946300B8D4D2 /* AppDelegate.swift */,
 				DDCD987920AA946300B8D4D2 /* Main.storyboard */,
 				DDCD987C20AA946400B8D4D2 /* Assets.xcassets */,
@@ -199,6 +212,9 @@
 				DDCD988820AA959900B8D4D2 /* GameController.swift */,
 				DDCD987720AA946300B8D4D2 /* ViewController.swift */,
 				DD20DF3520B13E7F00C7A9F4 /* SongSelectionController.swift */,
+				DC5188F720C22200008E16A2 /* LeaderboardRow.swift */,
+				DC5188F920C22230008E16A2 /* LeaderboardController.swift */,
+				DC5188FE20C223A7008E16A2 /* Score.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -247,11 +263,18 @@
 				TargetAttributes = {
 					DDCD987120AA946300B8D4D2 = {
 						CreatedOnToolsVersion = 9.3.1;
+						LastSwiftMigration = 0920;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
 			buildConfigurationList = DDCD986D20AA946300B8D4D2 /* Build configuration list for PBXProject "tunetilt" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -354,12 +377,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC5188FF20C223A7008E16A2 /* Score.swift in Sources */,
 				DDCD987820AA946300B8D4D2 /* ViewController.swift in Sources */,
 				DD18F86F20BB92F8003773A5 /* Key.swift in Sources */,
 				DD20DF3A20B1458300C7A9F4 /* AnimatorManager.swift in Sources */,
+				DC5188FA20C22230008E16A2 /* LeaderboardController.swift in Sources */,
 				C04290B820B3ECEA00A95719 /* SequencesStorage.swift in Sources */,
+				DC5188FD20C22306008E16A2 /* TuneTilt.xcdatamodeld in Sources */,
 				DD20DF3620B13E8000C7A9F4 /* SongSelectionController.swift in Sources */,
 				DD20DF3B20B1458300C7A9F4 /* StorageManager.swift in Sources */,
+				DC5188F820C22200008E16A2 /* LeaderboardRow.swift in Sources */,
 				DD20DF3C20B1458300C7A9F4 /* AlertHelper.swift in Sources */,
 				DDCD988920AA959900B8D4D2 /* GameController.swift in Sources */,
 				DDAF537420C17E7400738BE8 /* Song.swift in Sources */,
@@ -497,8 +524,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -508,21 +534,21 @@
 			baseConfigurationReference = F515D4D0A1E9943B7B2D0E62 /* Pods-tunetilt.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2A9AZU9A2Y;
+				DEVELOPMENT_TEAM = 6WJ364GSR7;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = tunetilt/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PODS_BUILD_DIR = "$(inherited)";
 				PODS_CONFIGURATION_BUILD_DIR = "$(inherited)";
 				PODS_PODFILE_DIR_PATH = "$(inherited)";
 				PODS_ROOT = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.blinking-light-studios.tunetilt";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "tunetilt/controller/tunetilt-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -533,21 +559,20 @@
 			baseConfigurationReference = 62AF78B66F6A7160C9A023ED /* Pods-tunetilt.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2A9AZU9A2Y;
+				DEVELOPMENT_TEAM = 6WJ364GSR7;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = tunetilt/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PODS_BUILD_DIR = "$(inherited)";
 				PODS_CONFIGURATION_BUILD_DIR = "$(inherited)";
 				PODS_PODFILE_DIR_PATH = "$(inherited)";
 				PODS_ROOT = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.blinking-light-studios.tunetilt";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "tunetilt/controller/tunetilt-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -575,6 +600,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DC5188FB20C22306008E16A2 /* TuneTilt.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DC5188FC20C22306008E16A2 /* TuneTilt.xcdatamodel */,
+			);
+			currentVersion = DC5188FC20C22306008E16A2 /* TuneTilt.xcdatamodel */;
+			path = TuneTilt.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DDCD986A20AA946300B8D4D2 /* Project object */;
 }
