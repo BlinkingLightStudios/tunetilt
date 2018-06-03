@@ -45,7 +45,7 @@ class SongSelectionController: UIViewController, UITableViewDataSource, UITableV
         let playButton: UILabel = cell.viewWithTag(2) as! UILabel
         let item = songs[indexPath.row]
         songName.text = item.name
-        difficulty.text = "Hard"
+        difficulty.text = getDifficulty(for: item.notes)
       
         if (displayPlayState){
             playButton.text = "Play"
@@ -101,6 +101,21 @@ class SongSelectionController: UIViewController, UITableViewDataSource, UITableV
     @IBAction func reloadData(_ sender: Any) {
         displayPlayState = !displayPlayState
         tableView.reloadData()
+    }
+    
+    func getDifficulty(for sequence: [String]) -> String {
+        switch sequence.count {
+        case 0...4:
+            return "Easy"
+        case 5...8:
+            return "Medium"
+        case 8...12:
+            return "Hard"
+        case 8...Int.max:
+            return "Very Hard"
+        default:
+            return "Unknown"
+        }
     }
     
 }
