@@ -167,8 +167,18 @@ class GameController: UIViewController, KeyDelegate, SequencePlayerDelegate {
     
     private func checkWin() {
         if playedSequence.elementsEqual(sequence) {
-            print("GAME IS WON")
+            performSegue(withIdentifier: "endGame", sender: self)
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier=="endGame"){
+            // Add the values to the new controller
+            
+//            guard let LeaderboardController = segue.destination as? LeaderboardController else { return }
+//            LeaderboardController.song = selectedSong.id
+        }
+        
     }
     
     func play(audio: String) throws {
