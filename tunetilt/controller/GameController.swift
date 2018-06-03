@@ -26,6 +26,10 @@ class GameController: UIViewController, KeyDelegate, SequencePlayerDelegate {
     var sequencePlayer: SequencePlayer?
     var player: String?
     
+    // Game time fields
+    var startTime: DispatchTime?
+    var endTime: DispatchTime?
+    
     // Outlet fields
     @IBOutlet weak var playedNotesLabel: UILabel!
     @IBOutlet weak var replayButton: UIButton!
@@ -40,6 +44,7 @@ class GameController: UIViewController, KeyDelegate, SequencePlayerDelegate {
         displayNotes()
         playedSequence = [String]()
         updatePlayedNotes()
+        startTime = nil
     }
     
     @IBAction func onReplayClick(_ sender: UIButton) {
@@ -153,6 +158,9 @@ class GameController: UIViewController, KeyDelegate, SequencePlayerDelegate {
     }
     
     func onKeyTapped(_ key: Key) {
+        if startTime == nil {
+            startTime = DispatchTime.now()
+        }
         let note = key.titleLabel!.text!
         do {
             try play(audio: note.lowercased())
@@ -167,18 +175,23 @@ class GameController: UIViewController, KeyDelegate, SequencePlayerDelegate {
     
     private func checkWin() {
         if playedSequence.elementsEqual(sequence) {
+            endTime = DispatchTime.now()
             performSegue(withIdentifier: "endGame", sender: self)
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier=="endGame"){
-            // Add the values to the new controller
             if let controller = segue.destination as? EndGameController {
+                // Get the play time
+                let nanoTime = endTime!.uptimeNanoseconds - startTime!.uptimeNanoseconds
+                let gameTime = Double(nanoTime) / 1_000_000_000
+                
+                // Add the values to the new controller
                 controller.song = song
+                controller.gameTime = gameTime
             }
         }
-        
     }
     
     func play(audio: String) throws {

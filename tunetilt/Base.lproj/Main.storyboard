@@ -439,6 +439,7 @@
                         <viewLayoutGuide key="safeArea" id="DTd-S1-TSQ"/>
                     </view>
                     <connections>
+                        <outlet property="playerTimeLabel" destination="ySP-SE-r7m" id="oSC-rX-WUb"/>
                         <outlet property="songTitleLabel" destination="X9u-9F-Tj2" id="npl-xi-5HW"/>
                     </connections>
                 </viewController>
