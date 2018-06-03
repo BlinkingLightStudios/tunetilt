@@ -43,7 +43,7 @@ class LeaderboardController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let row = rows[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "LeaderboardRow") as! LeaderboardRow
-        cell.player.text = row.value(forKey: "player") as! String
+        cell.player.text = row.value(forKey: "player") as? String
         cell.score.text = String(row.value(forKey: "score") as! Double) + "s"
         return cell
     }

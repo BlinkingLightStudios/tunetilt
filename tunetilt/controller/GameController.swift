@@ -111,7 +111,7 @@ class GameController: UIViewController, KeyDelegate {
     private func checkWin() {
         if playedSequence.elementsEqual(sequence) {
             print("GAME IS WON")
-            let s = Score()
+            let _ = Score()
            // s.save(player: player, score: <#T##Double#>, tune: <#T##String#>)
         }
     }

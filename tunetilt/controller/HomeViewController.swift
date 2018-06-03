@@ -9,13 +9,11 @@
 import UIKit
 import Firebase
 import GameKit
-class ViewController: UIViewController, GKGameCenterControllerDelegate {
-    var gcEnabled = Bool()
+class HomeViewController: UIViewController, GKGameCenterControllerDelegate {
     
-
-    func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
-        
-    }
+    
+    var gcEnabled = Bool()
+    @IBOutlet weak var playButton: UIButton!
     let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Sequences1.plist")
     var db: Firestore!
     var newNote = [Song]()
@@ -28,7 +26,10 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
         player = "Guest"
         authenticatePlayer()
         readNotes()
-        //styleButton()
+        styleButton()
+    }
+    
+    func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -39,12 +40,12 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
         
     }
     
-/*
+
     func styleButton() {
         playButton.layer.cornerRadius = playButton.frame.width / 2
         playButton.layer.borderColor = UIColor.black.cgColor
         playButton.layer.masksToBounds = true;
-    }*/
+    }
     
     func authenticatePlayer() {
         let localPlayer: GKLocalPlayer = GKLocalPlayer.localPlayer()
@@ -62,7 +63,10 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
                 print(error!)
             }
         }
-        player = localPlayer.alias!
+        
+        if let p = localPlayer.alias {
+            player = p
+        }
     }
 
     func readNotes(){

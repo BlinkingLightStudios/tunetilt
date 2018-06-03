@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,18 +29,34 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TuneTilt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yai-ae-RiP">
                                         <rect key="frame" x="0.0" y="0.0" width="736" height="207"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="GermaniaOne-Regular" family="Germania One" pointSize="75"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mkl-Dp-4KP">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cdQ-uU-7fc">
                                         <rect key="frame" x="0.0" y="207" width="736" height="207"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <state key="normal" title="Play"/>
-                                        <connections>
-                                            <segue destination="EFL-PX-K4q" kind="show" identifier="SongSelect" id="2w6-Lq-9og"/>
-                                        </connections>
-                                    </button>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mkl-Dp-4KP">
+                                                <rect key="frame" x="301.66666666666669" y="0.0" width="133" height="133"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Mkl-Dp-4KP" secondAttribute="height" multiplier="1:1" id="izP-ZZ-1V2"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="GermaniaOne-Regular" family="Germania One" pointSize="60"/>
+                                                <state key="normal" title=" Play ">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="EFL-PX-K4q" kind="show" identifier="SongSelect" id="2w6-Lq-9og"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="Mkl-Dp-4KP" firstAttribute="top" secondItem="cdQ-uU-7fc" secondAttribute="top" id="GzW-pn-ikH"/>
+                                            <constraint firstItem="Mkl-Dp-4KP" firstAttribute="centerX" secondItem="cdQ-uU-7fc" secondAttribute="centerX" id="s97-zb-4qI"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -52,6 +69,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="playButton" destination="Mkl-Dp-4KP" id="hNa-NH-qax"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -80,6 +100,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="85W-BV-uVb">
+                                <rect key="frame" x="0.0" y="0.0" width="736" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Song" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tcd-hI-rHu">
+                                        <rect key="frame" x="286.66666666666669" y="4.3333333333333321" width="163.33333333333331" height="43"/>
+                                        <fontDescription key="fontDescription" name="GermaniaOne-Regular" family="Germania One" pointSize="37"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wkj-dG-LEq">
+                                        <rect key="frame" x="10" y="10" width="44" height="30"/>
+                                        <fontDescription key="fontDescription" name="GermaniaOne-Regular" family="Germania One" pointSize="23"/>
+                                        <state key="normal" title="Back">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="unwind:" destination="EFL-PX-K4q" eventType="touchUpInside" id="N7j-XS-eT7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xb0-em-A7t">
+                                        <rect key="frame" x="566" y="10" width="160" height="30"/>
+                                        <fontDescription key="fontDescription" name="GermaniaOne-Regular" family="Germania One" pointSize="22"/>
+                                        <state key="normal" title="View Leaderboards">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onLeaderboardButtonClick:" destination="HtS-xz-gi3" eventType="touchUpInside" id="hh5-nS-k3x"/>
+                                            <action selector="reloadData:" destination="EFL-PX-K4q" eventType="touchUpInside" id="WjF-r6-j1F"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="xb0-em-A7t" firstAttribute="centerY" secondItem="85W-BV-uVb" secondAttribute="centerY" id="1Qz-Yk-ThN"/>
+                                    <constraint firstItem="Tcd-hI-rHu" firstAttribute="centerY" secondItem="85W-BV-uVb" secondAttribute="centerY" id="7vO-5g-ITW"/>
+                                    <constraint firstAttribute="height" constant="50" id="Fiz-rO-HcS"/>
+                                    <constraint firstAttribute="trailing" secondItem="xb0-em-A7t" secondAttribute="trailing" constant="10" id="PKJ-8c-BUm"/>
+                                    <constraint firstItem="xb0-em-A7t" firstAttribute="top" secondItem="85W-BV-uVb" secondAttribute="top" constant="10" id="YFQ-73-bSf"/>
+                                    <constraint firstItem="Tcd-hI-rHu" firstAttribute="centerX" secondItem="85W-BV-uVb" secondAttribute="centerX" id="fXn-ec-nfN"/>
+                                    <constraint firstItem="wkj-dG-LEq" firstAttribute="top" secondItem="85W-BV-uVb" secondAttribute="top" constant="10" id="iAO-ES-pkc"/>
+                                    <constraint firstItem="wkj-dG-LEq" firstAttribute="centerY" secondItem="85W-BV-uVb" secondAttribute="centerY" id="r7K-wH-jCJ"/>
+                                    <constraint firstItem="wkj-dG-LEq" firstAttribute="leading" secondItem="85W-BV-uVb" secondAttribute="leading" constant="10" id="yrg-pa-XYa"/>
+                                </constraints>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZIo-Rp-qrZ">
                                 <rect key="frame" x="0.0" y="50" width="736" height="364"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -94,7 +158,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="SuB-kE-5gX">
                                                     <rect key="frame" x="10" y="0.0" width="716" height="43.666666666666664"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbz-w3-HBD">
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbz-w3-HBD">
                                                             <rect key="frame" x="0.0" y="0.0" width="179" height="43.666666666666664"/>
                                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" name="GermaniaOne-Regular" family="Germania One" pointSize="18"/>
@@ -108,19 +172,20 @@
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best Time: 0.00s" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vre-2g-9Gx">
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best Time: 0.00s" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vre-2g-9Gx">
                                                             <rect key="frame" x="358" y="0.0" width="179" height="43.666666666666664"/>
                                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" name="GermaniaOne-Regular" family="Germania One" pointSize="18"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7jt-RV-0YF">
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="2" text="Play" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1sO-Rh-xFq">
                                                             <rect key="frame" x="537" y="0.0" width="179" height="43.666666666666664"/>
-                                                            <fontDescription key="fontDescription" name="GermaniaOne-Regular" family="Germania One" pointSize="32"/>
                                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <state key="normal" title="Play"/>
-                                                        </button>
+                                                            <fontDescription key="fontDescription" name="GermaniaOne-Regular" family="Germania One" pointSize="32"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
@@ -136,49 +201,6 @@
                                 </prototypes>
                                 <sections/>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="85W-BV-uVb">
-                                <rect key="frame" x="0.0" y="0.0" width="736" height="50"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wkj-dG-LEq">
-                                        <rect key="frame" x="10" y="6" width="54" height="44"/>
-                                        <fontDescription key="fontDescription" name="GermaniaOne-Regular" family="Germania One" pointSize="23"/>
-                                        <state key="normal" title="Back">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="unwind:" destination="EFL-PX-K4q" eventType="touchUpInside" id="N7j-XS-eT7"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Song" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tcd-hI-rHu">
-                                        <rect key="frame" x="286" y="4.3333333333333321" width="164" height="43"/>
-                                        <fontDescription key="fontDescription" name="GermaniaOne-Regular" family="Germania One" pointSize="37"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bjn-4n-VZr">
-                                        <rect key="frame" x="679" y="8" width="49" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <connections>
-                                            <action selector="reload:" destination="EFL-PX-K4q" eventType="valueChanged" id="Z7z-rA-pMQ"/>
-                                        </connections>
-                                    </switch>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Toggle Leaderboard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MjK-ns-uwS">
-                                        <rect key="frame" x="533" y="15" width="138" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="highlightedColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="wkj-dG-LEq" firstAttribute="centerY" secondItem="85W-BV-uVb" secondAttribute="centerY" id="2QA-5a-DXi"/>
-                                    <constraint firstItem="Tcd-hI-rHu" firstAttribute="centerY" secondItem="85W-BV-uVb" secondAttribute="centerY" id="7vO-5g-ITW"/>
-                                    <constraint firstAttribute="height" constant="50" id="Fiz-rO-HcS"/>
-                                    <constraint firstItem="wkj-dG-LEq" firstAttribute="leading" secondItem="85W-BV-uVb" secondAttribute="leading" constant="10" id="Rn8-HG-0mN"/>
-                                    <constraint firstItem="Tcd-hI-rHu" firstAttribute="centerX" secondItem="85W-BV-uVb" secondAttribute="centerX" id="fXn-ec-nfN"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -193,13 +215,14 @@
                         <viewLayoutGuide key="safeArea" id="O8b-KE-HpY"/>
                     </view>
                     <connections>
-                        <outlet property="buttonswitch" destination="Bjn-4n-VZr" id="4yX-3x-1ZR"/>
+                        <outlet property="buttonSwitch" destination="1Qz-Yk-ThN" id="B4k-oI-465"/>
                         <outlet property="tableView" destination="ZIo-Rp-qrZ" id="zLL-vr-lyQ"/>
                         <segue destination="Lpw-wQ-jI9" kind="show" identifier="playGame" id="7c1-At-vFF"/>
                         <segue destination="b2G-ZY-vxq" kind="show" identifier="Leaderboard" id="2dT-nf-Me6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HOr-z9-TcX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="HtS-xz-gi3" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="886.95652173913049" y="15.942028985507248"/>
         </scene>
@@ -275,7 +298,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YXk-fB-J4V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="900.00000000000011" y="1024.6376811594205"/>
+            <point key="canvasLocation" x="887" y="1025"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Kgy-WS-WWs">

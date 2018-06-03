@@ -13,14 +13,14 @@ class SongSelectionController: UIViewController, UITableViewDataSource, UITableV
     // Data fields
     var songs = [Song]()
     var selectedSong = Song()
-    var buttontext = "Play"
+    var displayPlayState: Bool = true
     var player: String?
     let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Sequences.plist")
     let storage = SongsStorage()
     
     // Outlet fields
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var buttonswitch: UISwitch!
+    @IBOutlet weak var buttonSwitch: UIButton!
     
     
     
@@ -43,27 +43,16 @@ class SongSelectionController: UIViewController, UITableViewDataSource, UITableV
         // Get and set the labels
         let songName: UILabel = cell.viewWithTag(3) as! UILabel
         let difficulty: UILabel = cell.viewWithTag(1) as! UILabel
-        let playButton: UIButton = cell.viewWithTag(2) as! UIButton
+        let playButton: UILabel = cell.viewWithTag(2) as! UILabel
         let item = songs[indexPath.row]
         songName.text = item.name
         difficulty.text = "Hard"
       
-        if (buttonswitch.isOn){
-            playButton.setTitle("Play", for: UIControlState())
-            
+        if (displayPlayState){
+            playButton.text = "Play"
         }
         else{
-            playButton.setTitle("Leaderboard", for: UIControlState())
-            
-        }
-//        playButton.setTitle("Play", for: UIControlState())
-        
-            // Make the background colour alternate
-        if indexPath.row % 2 == 1 {
-            cell.backgroundColor = UIColor(red: 255/255.0, green: 255/255.0, blue: 255/255.0, alpha: 0.1)
-        }
-        else {
-            cell.backgroundColor = UIColor.clear
+            playButton.text = "Leaderboard"
         }
         
         return cell
@@ -76,7 +65,7 @@ class SongSelectionController: UIViewController, UITableViewDataSource, UITableV
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedSong = songs[indexPath.row]
-        if (!buttonswitch.isOn){
+        if (!displayPlayState){
             performSegue(withIdentifier: "Leaderboard", sender: self)
         }
         else{
@@ -98,8 +87,6 @@ class SongSelectionController: UIViewController, UITableViewDataSource, UITableV
         
     }
     
-
-    
     func loadData() {
         if let data = try? Data(contentsOf: dataFilePath!){
             let decoder = PropertyListDecoder()
@@ -111,7 +98,9 @@ class SongSelectionController: UIViewController, UITableViewDataSource, UITableV
             }
         }
     }
-    @IBAction func reload(_ sender: Any) {
+    
+    @IBAction func reloadData(_ sender: Any) {
+        displayPlayState = !displayPlayState
         tableView.reloadData()
     }
     
