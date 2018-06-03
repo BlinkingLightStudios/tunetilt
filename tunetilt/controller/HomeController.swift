@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 import GameKit
-class HomeViewController: UIViewController, GKGameCenterControllerDelegate {
+class HomeController: UIViewController, GKGameCenterControllerDelegate {
     
     
     var gcEnabled = Bool()

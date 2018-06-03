@@ -174,9 +174,9 @@ class GameController: UIViewController, KeyDelegate, SequencePlayerDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier=="endGame"){
             // Add the values to the new controller
-            
-//            guard let LeaderboardController = segue.destination as? LeaderboardController else { return }
-//            LeaderboardController.song = selectedSong.id
+            if let controller = segue.destination as? EndGameController {
+                controller.song = song
+            }
         }
         
     }

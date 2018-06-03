@@ -21,8 +21,6 @@ class LeaderboardController: UIViewController, UITableViewDelegate, UITableViewD
         rows = scores.get(tune: song!)
         print(rows.count)
     }
-    
-
 
     @IBAction func unwind(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -33,8 +31,6 @@ class LeaderboardController: UIViewController, UITableViewDelegate, UITableViewD
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return rows.count

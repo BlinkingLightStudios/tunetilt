@@ -13,7 +13,7 @@
 		DC5188F820C22200008E16A2 /* LeaderboardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5188F720C22200008E16A2 /* LeaderboardRow.swift */; };
 		DC5188FA20C22230008E16A2 /* LeaderboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5188F920C22230008E16A2 /* LeaderboardController.swift */; };
 		DC5188FD20C22306008E16A2 /* TuneTilt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DC5188FB20C22306008E16A2 /* TuneTilt.xcdatamodeld */; };
-		DC5188FF20C223A7008E16A2 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5188FE20C223A7008E16A2 /* Score.swift */; };
+		DC5188FF20C223A7008E16A2 /* ScoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5188FE20C223A7008E16A2 /* ScoreManager.swift */; };
 		DC51890320C22D62008E16A2 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC51890220C22D62008E16A2 /* GameKit.framework */; };
 		DD18F86F20BB92F8003773A5 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD18F86E20BB92F8003773A5 /* Key.swift */; };
 		DD20DF3620B13E8000C7A9F4 /* SongSelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD20DF3520B13E7F00C7A9F4 /* SongSelectionController.swift */; };
@@ -36,12 +36,13 @@
 		DDAF537820C231B000738BE8 /* GermaniaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDAF537720C231B000738BE8 /* GermaniaOne-Regular.ttf */; };
 		DDAF537C20C2427A00738BE8 /* launch.png in Resources */ = {isa = PBXBuildFile; fileRef = DDAF537B20C2427A00738BE8 /* launch.png */; };
 		DDCD987620AA946300B8D4D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCD987520AA946300B8D4D2 /* AppDelegate.swift */; };
-		DDCD987820AA946300B8D4D2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCD987720AA946300B8D4D2 /* HomeViewController.swift */; };
+		DDCD987820AA946300B8D4D2 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCD987720AA946300B8D4D2 /* HomeController.swift */; };
 		DDCD987B20AA946300B8D4D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDCD987920AA946300B8D4D2 /* Main.storyboard */; };
 		DDCD987D20AA946400B8D4D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDCD987C20AA946400B8D4D2 /* Assets.xcassets */; };
 		DDCD988020AA946400B8D4D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDCD987E20AA946400B8D4D2 /* LaunchScreen.storyboard */; };
 		DDCD988920AA959900B8D4D2 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCD988820AA959900B8D4D2 /* GameController.swift */; };
 		DDEBD5D720C3B18900D7C664 /* SequencePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEBD5D620C3B18900D7C664 /* SequencePlayer.swift */; };
+		DDEBD5D920C3F18800D7C664 /* EndGameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEBD5D820C3F18800D7C664 /* EndGameController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,7 +56,7 @@
 		DC5188F720C22200008E16A2 /* LeaderboardRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardRow.swift; sourceTree = "<group>"; };
 		DC5188F920C22230008E16A2 /* LeaderboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardController.swift; sourceTree = "<group>"; };
 		DC5188FC20C22306008E16A2 /* TuneTilt.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TuneTilt.xcdatamodel; sourceTree = "<group>"; };
-		DC5188FE20C223A7008E16A2 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		DC5188FE20C223A7008E16A2 /* ScoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreManager.swift; sourceTree = "<group>"; };
 		DC51890220C22D62008E16A2 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		DD18F86E20BB92F8003773A5 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 		DD20DF3520B13E7F00C7A9F4 /* SongSelectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongSelectionController.swift; sourceTree = "<group>"; };
@@ -79,13 +80,14 @@
 		DDAF537B20C2427A00738BE8 /* launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = launch.png; path = tunetilt/resource/launch.png; sourceTree = SOURCE_ROOT; };
 		DDCD987220AA946300B8D4D2 /* tunetilt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tunetilt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDCD987520AA946300B8D4D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DDCD987720AA946300B8D4D2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		DDCD987720AA946300B8D4D2 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		DDCD987A20AA946300B8D4D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DDCD987C20AA946400B8D4D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDCD987F20AA946400B8D4D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDCD988120AA946400B8D4D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DDCD988820AA959900B8D4D2 /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		DDEBD5D620C3B18900D7C664 /* SequencePlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequencePlayer.swift; sourceTree = "<group>"; };
+		DDEBD5D820C3F18800D7C664 /* EndGameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndGameController.swift; sourceTree = "<group>"; };
 		F515D4D0A1E9943B7B2D0E62 /* Pods-tunetilt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tunetilt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tunetilt/Pods-tunetilt.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,6 +146,8 @@
 				DD20DF3720B1458300C7A9F4 /* AnimatorManager.swift */,
 				DD20DF3820B1458300C7A9F4 /* StorageManager.swift */,
 				DDEBD5D620C3B18900D7C664 /* SequencePlayer.swift */,
+				DC5188FE20C223A7008E16A2 /* ScoreManager.swift */,
+				DC5188F720C22200008E16A2 /* LeaderboardRow.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -228,11 +232,10 @@
 			isa = PBXGroup;
 			children = (
 				DDCD988820AA959900B8D4D2 /* GameController.swift */,
-				DDCD987720AA946300B8D4D2 /* HomeViewController.swift */,
+				DDCD987720AA946300B8D4D2 /* HomeController.swift */,
 				DD20DF3520B13E7F00C7A9F4 /* SongSelectionController.swift */,
-				DC5188F720C22200008E16A2 /* LeaderboardRow.swift */,
 				DC5188F920C22230008E16A2 /* LeaderboardController.swift */,
-				DC5188FE20C223A7008E16A2 /* Score.swift */,
+				DDEBD5D820C3F18800D7C664 /* EndGameController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -400,13 +403,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC5188FF20C223A7008E16A2 /* Score.swift in Sources */,
-				DDCD987820AA946300B8D4D2 /* HomeViewController.swift in Sources */,
+				DC5188FF20C223A7008E16A2 /* ScoreManager.swift in Sources */,
+				DDCD987820AA946300B8D4D2 /* HomeController.swift in Sources */,
 				DD18F86F20BB92F8003773A5 /* Key.swift in Sources */,
 				DD20DF3A20B1458300C7A9F4 /* AnimatorManager.swift in Sources */,
 				DC5188FA20C22230008E16A2 /* LeaderboardController.swift in Sources */,
 				C04290B820B3ECEA00A95719 /* SequencesStorage.swift in Sources */,
 				DC5188FD20C22306008E16A2 /* TuneTilt.xcdatamodeld in Sources */,
+				DDEBD5D920C3F18800D7C664 /* EndGameController.swift in Sources */,
 				DD20DF3620B13E8000C7A9F4 /* SongSelectionController.swift in Sources */,
 				DDEBD5D720C3B18900D7C664 /* SequencePlayer.swift in Sources */,
 				DD20DF3B20B1458300C7A9F4 /* StorageManager.swift in Sources */,

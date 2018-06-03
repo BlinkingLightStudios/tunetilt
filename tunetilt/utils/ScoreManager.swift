@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 import UIKit
 
-class Score{
+class Score {
 
     lazy var persistentContainer: NSPersistentContainer = {
         
