@@ -84,9 +84,64 @@
                     <view key="view" contentMode="scaleToFill" id="GdL-Be-OJZ">
                         <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="U8C-Ty-ac3">
+                                <rect key="frame" x="10" y="0.0" width="716" height="32"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sl9-DJ-LJP">
+                                        <rect key="frame" x="0.0" y="0.0" width="36" height="32"/>
+                                        <fontDescription key="fontDescription" name="GermaniaOne-Regular" family="Germania One" pointSize="17"/>
+                                        <state key="normal" title="Home">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onHomeClick:" destination="Lpw-wQ-jI9" eventType="touchUpInside" id="VhK-bw-ZiX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKb-Mq-PiL">
+                                        <rect key="frame" x="344.66666666666669" y="0.0" width="33" height="32"/>
+                                        <fontDescription key="fontDescription" name="GermaniaOne-Regular" family="Germania One" pointSize="17"/>
+                                        <state key="normal" title="Undo">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onUndoClick:" destination="Lpw-wQ-jI9" eventType="touchUpInside" id="l8S-fs-zjc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O7Z-Zr-fXJ">
+                                        <rect key="frame" x="686" y="0.0" width="30" height="32"/>
+                                        <fontDescription key="fontDescription" name="GermaniaOne-Regular" family="Germania One" pointSize="17"/>
+                                        <state key="normal" title="Play">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onReplayClick:" destination="Lpw-wQ-jI9" eventType="touchUpInside" id="rmg-Yi-RTv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXT-sD-DH9">
+                                <rect key="frame" x="368" y="414" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="GermaniaOne-Regular" family="Germania One" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kxA-7Q-DEZ" firstAttribute="trailing" secondItem="U8C-Ty-ac3" secondAttribute="trailing" constant="10" id="HJf-Ty-sbp"/>
+                            <constraint firstItem="vXT-sD-DH9" firstAttribute="centerX" secondItem="GdL-Be-OJZ" secondAttribute="centerX" id="Oeg-V5-h8V"/>
+                            <constraint firstItem="U8C-Ty-ac3" firstAttribute="top" secondItem="kxA-7Q-DEZ" secondAttribute="top" id="U3F-gQ-Pmm"/>
+                            <constraint firstAttribute="bottom" secondItem="vXT-sD-DH9" secondAttribute="bottom" id="rNm-8D-YGF"/>
+                            <constraint firstItem="U8C-Ty-ac3" firstAttribute="leading" secondItem="kxA-7Q-DEZ" secondAttribute="leading" constant="10" id="tQr-Rc-r9t"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="kxA-7Q-DEZ"/>
                     </view>
+                    <connections>
+                        <outlet property="playedNotesLabel" destination="vXT-sD-DH9" id="itm-ZT-4jN"/>
+                        <outlet property="replayButton" destination="O7Z-Zr-fXJ" id="Ic8-yt-h5I"/>
+                        <segue destination="xb4-Bu-RzF" kind="show" identifier="endGame" id="o7R-bx-zxn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g27-hW-8NE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

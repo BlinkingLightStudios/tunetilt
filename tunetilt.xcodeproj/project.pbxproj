@@ -41,6 +41,7 @@
 		DDCD987D20AA946400B8D4D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDCD987C20AA946400B8D4D2 /* Assets.xcassets */; };
 		DDCD988020AA946400B8D4D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDCD987E20AA946400B8D4D2 /* LaunchScreen.storyboard */; };
 		DDCD988920AA959900B8D4D2 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCD988820AA959900B8D4D2 /* GameController.swift */; };
+		DDEBD5D720C3B18900D7C664 /* SequencePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEBD5D620C3B18900D7C664 /* SequencePlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		DDCD987F20AA946400B8D4D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDCD988120AA946400B8D4D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DDCD988820AA959900B8D4D2 /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
+		DDEBD5D620C3B18900D7C664 /* SequencePlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequencePlayer.swift; sourceTree = "<group>"; };
 		F515D4D0A1E9943B7B2D0E62 /* Pods-tunetilt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tunetilt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tunetilt/Pods-tunetilt.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,6 +143,7 @@
 				DD20DF3920B1458300C7A9F4 /* AlertHelper.swift */,
 				DD20DF3720B1458300C7A9F4 /* AnimatorManager.swift */,
 				DD20DF3820B1458300C7A9F4 /* StorageManager.swift */,
+				DDEBD5D620C3B18900D7C664 /* SequencePlayer.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 				C04290B820B3ECEA00A95719 /* SequencesStorage.swift in Sources */,
 				DC5188FD20C22306008E16A2 /* TuneTilt.xcdatamodeld in Sources */,
 				DD20DF3620B13E8000C7A9F4 /* SongSelectionController.swift in Sources */,
+				DDEBD5D720C3B18900D7C664 /* SequencePlayer.swift in Sources */,
 				DD20DF3B20B1458300C7A9F4 /* StorageManager.swift in Sources */,
 				DC5188F820C22200008E16A2 /* LeaderboardRow.swift in Sources */,
 				DD20DF3C20B1458300C7A9F4 /* AlertHelper.swift in Sources */,

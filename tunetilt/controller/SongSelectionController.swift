@@ -23,7 +23,6 @@ class SongSelectionController: UIViewController, UITableViewDataSource, UITableV
     @IBOutlet weak var buttonSwitch: UIButton!
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
