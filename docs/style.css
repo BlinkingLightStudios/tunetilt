@@ -1,0 +1,29 @@
+@font-face {
+  font-family: GermaniaOne;
+  src: url(./res/GermaniaOne-Regular.ttf);
+}
+
+html {
+	background-color: black;
+	font-family: "GermaniaOne";
+}
+
+.game-image {
+	display:block;
+    margin:auto;
+}
+
+.right {
+	float: right;
+	margin-right: 10%;
+}
+
+.left {
+	float: left;
+	margin-left: 10%;
+}
+
+.promo-text {
+	color: white;
+	text-align: center;
+}
