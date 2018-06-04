@@ -190,6 +190,7 @@ class GameController: UIViewController, KeyDelegate, SequencePlayerDelegate {
                 // Add the values to the new controller
                 controller.song = song
                 controller.gameTime = gameTime
+                controller.playerName = player
             }
         }
     }

@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 import UIKit
 
-class Score {
+class ScoreManager {
 
     lazy var persistentContainer: NSPersistentContainer = {
         
@@ -32,7 +32,7 @@ class Score {
         for row in rows{
             if row.value(forKey: "player") as? String==player{
                 let playerscore = row.value(forKey: "score") as! Double
-                if playerscore < score{
+                if playerscore > score{
                     row.setValue(score, forKey: "score")
                     do {
                         try managedContext.save()
@@ -70,7 +70,7 @@ class Score {
         let fetchRequest =
             NSFetchRequest<NSManagedObject>(entityName: "Leaderboards")
         fetchRequest.predicate = NSPredicate(format: "tune = %@", tune)
-        let sort = NSSortDescriptor(key: "score", ascending: false)
+        let sort = NSSortDescriptor(key: "score", ascending: true)
         fetchRequest.sortDescriptors = [sort]
         
         do {
@@ -82,20 +82,22 @@ class Score {
         return rows
     }
     
-    public func getBest(player: String, tune: String) -> Double{
-        var rows: [NSManagedObject] = []
-        
+    public func getBest(player: String, tune: String) -> Double {
         let managedContext =
             persistentContainer.viewContext
         
         let fetchRequest =
             NSFetchRequest<NSManagedObject>(entityName: "Leaderboards")
-        fetchRequest.predicate = NSPredicate(format: "tune = %@", tune)
-        fetchRequest.predicate = NSPredicate(format: "player = %@", player)
+        fetchRequest.predicate = NSPredicate(format: "tune = %@ AND player = %@", tune, player)
         
         do {
-            rows = try managedContext.fetch(fetchRequest)
-            return rows[0].value(forKey: "score") as! Double
+            let rows: [NSManagedObject] = try managedContext.fetch(fetchRequest)
+            if (rows.count > 0){
+                return rows[0].value(forKey: "score") as! Double
+            }
+            else{
+                return -1
+            }
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
         }

@@ -17,6 +17,7 @@
 		DC5188FF20C223A7008E16A2 /* ScoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5188FE20C223A7008E16A2 /* ScoreManager.swift */; };
 		DC51890320C22D62008E16A2 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC51890220C22D62008E16A2 /* GameKit.framework */; };
 		DD17514520C52DB4002E6F1E /* SongsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD17514420C52DB4002E6F1E /* SongsLoader.swift */; };
+		DD17514720C54603002E6F1E /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD17514620C54603002E6F1E /* Social.framework */; };
 		DD18F86F20BB92F8003773A5 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD18F86E20BB92F8003773A5 /* Key.swift */; };
 		DD20DF3620B13E8000C7A9F4 /* SongSelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD20DF3520B13E7F00C7A9F4 /* SongSelectionController.swift */; };
 		DD20DF3A20B1458300C7A9F4 /* AnimatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD20DF3720B1458300C7A9F4 /* AnimatorManager.swift */; };
@@ -61,6 +62,7 @@
 		DC5188FE20C223A7008E16A2 /* ScoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreManager.swift; sourceTree = "<group>"; };
 		DC51890220C22D62008E16A2 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		DD17514420C52DB4002E6F1E /* SongsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsLoader.swift; sourceTree = "<group>"; };
+		DD17514620C54603002E6F1E /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		DD18F86E20BB92F8003773A5 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 		DD20DF3520B13E7F00C7A9F4 /* SongSelectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongSelectionController.swift; sourceTree = "<group>"; };
 		DD20DF3720B1458300C7A9F4 /* AnimatorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatorManager.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD17514720C54603002E6F1E /* Social.framework in Frameworks */,
 				A95C12D9E8598A8C9927C9FA /* Pods_tunetilt.framework in Frameworks */,
 				DC51890320C22D62008E16A2 /* GameKit.framework in Frameworks */,
 				A3ECA6A9474724D6261150D8 /* Pods_tunetilt.framework in Frameworks */,
@@ -120,6 +123,7 @@
 		8020562B3EDAA78D7A1D59A1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DD17514620C54603002E6F1E /* Social.framework */,
 				DC51890220C22D62008E16A2 /* GameKit.framework */,
 				C59B65FE3C31E015FF53A99A /* Pods_tunetilt.framework */,
 			);

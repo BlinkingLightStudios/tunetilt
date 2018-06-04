@@ -11,25 +11,21 @@ import CoreData
 
 class LeaderboardController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
+    @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var leaderboard: UITableView!
-    var song: String?
+    var song: Song?
     var rows: [NSManagedObject] = []
-    let scores = Score()
+    let scores = ScoreManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        rows = scores.get(tune: song!)
-        print(rows.count)
+        rows = scores.get(tune: song!.id)
+        
+        headerLabel.text = "Leaderboard for \(song!.name)"
     }
 
     @IBAction func unwind(_ sender: Any) {
         dismiss(animated: true, completion: nil)
-    }
-    
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

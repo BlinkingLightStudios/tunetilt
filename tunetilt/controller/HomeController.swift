@@ -27,12 +27,13 @@ class HomeController: UIViewController, GKGameCenterControllerDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier=="SongSelect"){
+        if (segue.identifier=="selectSong"){
             guard let SongSelectionController = segue.destination as? SongSelectionController else { return }
             SongSelectionController.player = player
         }
         
     }
+    
     func styleButton() {
         playButton.layer.cornerRadius = playButton.frame.width / 2
         playButton.layer.borderColor = UIColor.black.cgColor
@@ -47,6 +48,9 @@ class HomeController: UIViewController, GKGameCenterControllerDelegate {
             if((ViewController) != nil) {
                 self.present(ViewController!, animated: true, completion: nil)
             } else if (localPlayer.isAuthenticated) {
+                if let p = localPlayer.alias {
+                    self.player = p
+                }
                 self.gcEnabled = true
             } else {
                 // 3. Game center is not enabled on the users device
@@ -56,9 +60,7 @@ class HomeController: UIViewController, GKGameCenterControllerDelegate {
             }
         }
         
-        if let p = localPlayer.alias {
-            player = p
-        }
+        
     }
     
     @IBAction func unwindToHomeController(segue: UIStoryboardSegue) {}

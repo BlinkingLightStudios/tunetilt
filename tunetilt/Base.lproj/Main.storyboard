@@ -47,7 +47,7 @@
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="EFL-PX-K4q" kind="show" id="wv3-OG-JNe"/>
+                                                    <segue destination="EFL-PX-K4q" kind="show" identifier="selectSong" id="wv3-OG-JNe"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -306,7 +306,7 @@
                                     <action selector="unwind:" destination="b2G-ZY-vxq" eventType="touchUpInside" id="wNi-Kp-4bd"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QJu-q3-QzH">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QJu-q3-QzH">
                                 <rect key="frame" x="0.0" y="52" width="736" height="362"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -314,7 +314,7 @@
                                         <rect key="frame" x="0.0" y="28" width="736" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xak-QK-DnP" id="6NG-AI-ATi" customClass="LeaderboardRow" customModule="tunetilt" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="736" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="736" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBc-SS-CtV">
@@ -360,6 +360,7 @@
                         <viewLayoutGuide key="safeArea" id="51f-XD-sKE"/>
                     </view>
                     <connections>
+                        <outlet property="headerLabel" destination="Deg-c2-DOq" id="DuT-Vu-nJH"/>
                         <outlet property="leaderboard" destination="QJu-q3-QzH" id="gDL-l4-8JI"/>
                     </connections>
                 </viewController>
@@ -420,6 +421,9 @@
                                                 <state key="normal" title="Share">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="clicktoShare:" destination="xb4-Bu-RzF" eventType="touchUpInside" id="1kF-xZ-OIs"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vNc-Ko-JGY">
                                                 <rect key="frame" x="490.66666666666669" y="33.666666666666686" width="245.33333333333331" height="71"/>
@@ -446,6 +450,7 @@
                         <viewLayoutGuide key="safeArea" id="DTd-S1-TSQ"/>
                     </view>
                     <connections>
+                        <outlet property="bestTimeLabel" destination="WYZ-tP-fHP" id="TRN-Lp-Muk"/>
                         <outlet property="playerTimeLabel" destination="ySP-SE-r7m" id="oSC-rX-WUb"/>
                         <outlet property="songTitleLabel" destination="X9u-9F-Tj2" id="npl-xi-5HW"/>
                         <segue destination="9X8-7M-aY1" kind="unwind" identifier="unwindToHomeFromEnd" unwindAction="unwindToHomeControllerWithSegue:" id="r4f-eI-PYC"/>

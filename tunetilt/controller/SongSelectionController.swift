@@ -16,6 +16,8 @@ class SongSelectionController: UIViewController, UITableViewDataSource, UITableV
     var displayPlayState: Bool = true
     var player: String?
     let storage = SongsStorage()
+    var loadingLabel: UILabel?
+    let scoreManager: ScoreManager = ScoreManager()
     
     // Outlet fields
     @IBOutlet weak var tableView: UITableView!
@@ -37,13 +39,14 @@ class SongSelectionController: UIViewController, UITableViewDataSource, UITableV
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if songs.count == 0 {
-            let loadingLabel: UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: tableView.bounds.size.height))
-            loadingLabel.text = "updating songs..."
-            loadingLabel.font = UIFont(name: "GermaniaOne-Regular", size: UIFont.labelFontSize)
-            loadingLabel.textColor = UIColor.white
-            loadingLabel.textAlignment = .center
+            loadingLabel = UILabel(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: tableView.bounds.size.height))
+            loadingLabel?.text = "updating songs..."
+            loadingLabel?.font = UIFont(name: "GermaniaOne-Regular", size: UIFont.labelFontSize)
+            loadingLabel?.textColor = UIColor.white
+            loadingLabel?.textAlignment = .center
             tableView.backgroundView = loadingLabel
         }
+        
         
         return songs.count
     }
@@ -52,19 +55,31 @@ class SongSelectionController: UIViewController, UITableViewDataSource, UITableV
         // Setup the cell as reusable
         let cell = tableView.dequeueReusableCell(withIdentifier: "songCell", for: indexPath)
       
-        // Get and set the labels
+        // Get the labels
         let songName: UILabel = cell.viewWithTag(3) as! UILabel
         let difficulty: UILabel = cell.viewWithTag(1) as! UILabel
+        let bestTime: UILabel = cell.viewWithTag(4) as! UILabel
         let playButton: UILabel = cell.viewWithTag(2) as! UILabel
-        let item = songs[indexPath.row]
-        songName.text = item.name
-        difficulty.text = getDifficulty(for: item.notes)
+        
+        // Get the data
+        let song = songs[indexPath.row]
+        let roundedBestTime = Double(round(1000 * scoreManager.getBest(player: player!, tune: song.id))/1000)
+        
+        // Set the data
+        songName.text = song.name
+        difficulty.text = getDifficulty(for: song.notes)
+        if roundedBestTime > 0 {
+            bestTime.text = "Best Time: \(roundedBestTime)s"
+        }
+        else {
+            bestTime.text = "Unplayed"
+        }
       
         if (displayPlayState){
             playButton.text = "Play"
         }
         else{
-            playButton.text = "Leaderboard"
+            playButton.text = "Scores"
         }
         
         return cell
@@ -84,7 +99,7 @@ class SongSelectionController: UIViewController, UITableViewDataSource, UITableV
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier=="Leaderboard"){
             guard let LeaderboardController = segue.destination as? LeaderboardController else { return }
-            LeaderboardController.song = selectedSong.id
+            LeaderboardController.song = selectedSong
         }
         else{
             guard let GameController = segue.destination as? GameController else { return }
@@ -95,6 +110,7 @@ class SongSelectionController: UIViewController, UITableViewDataSource, UITableV
     
     func onSongsLoaded(songs: [Song]) {
         self.songs = songs
+        loadingLabel?.isHidden = true
         tableView.reloadData()
     }
     
