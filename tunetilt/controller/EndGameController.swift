@@ -27,4 +27,5 @@ class EndGameController: UIViewController {
         playerTimeLabel.text = "Time: \(roundedTime)s"
     }
     
+
 }

@@ -25,18 +25,7 @@ class SongsStorage {
             print("Error saving data \(error)")
         }
     }
-    
-    func loadData()  {
-        if let data = try? Data(contentsOf: dataFilePath!){
-            let decoder = PropertyListDecoder()
-            do {
-                note = try decoder.decode(Song.self, from: data)
-            }
-            catch {
-                print("Error loading data: \(error)")
-            }
-        }
- }
+
     
 }
 

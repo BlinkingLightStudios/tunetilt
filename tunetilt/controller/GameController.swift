@@ -84,7 +84,7 @@ class GameController: UIViewController, KeyDelegate, SequencePlayerDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         // Add the notes to the view
-        displayNotes()
+        onUndoClick(UIButton())
     }
     
     func addKey(for note: String) {
@@ -217,6 +217,10 @@ class GameController: UIViewController, KeyDelegate, SequencePlayerDelegate {
     func onSequenceEnd() {
         replayButton.setTitle("Replay", for: .normal)
         self.view.isUserInteractionEnabled = true
+    }
+    
+    @IBAction func unwindToGameController(segue:UIStoryboardSegue) {
+        
     }
 
 }

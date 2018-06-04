@@ -14,14 +14,12 @@ class HomeController: UIViewController, GKGameCenterControllerDelegate {
     
     var gcEnabled = Bool()
     @IBOutlet weak var playButton: UIButton!
-    let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Sequences1.plist")
     var db: Firestore!
     var newNote = [Song]()
     var storage = SongsStorage()
     var player: String?
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         player = "Guest"
         authenticatePlayer()
@@ -39,8 +37,6 @@ class HomeController: UIViewController, GKGameCenterControllerDelegate {
         }
         
     }
-    
-
     func styleButton() {
         playButton.layer.cornerRadius = playButton.frame.width / 2
         playButton.layer.borderColor = UIColor.black.cgColor
@@ -88,7 +84,9 @@ class HomeController: UIViewController, GKGameCenterControllerDelegate {
             }
         }
     }
-
+    @IBAction func unwindToHomeController(segue:UIStoryboardSegue) {
+       
+    }
 
 }
 
