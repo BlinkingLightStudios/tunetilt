@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
@@ -47,7 +47,7 @@
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="EFL-PX-K4q" kind="show" identifier="SongSelect" id="2w6-Lq-9og"/>
+                                                    <segue destination="EFL-PX-K4q" kind="show" id="wv3-OG-JNe"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -70,12 +70,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="playButton" destination="Mkl-Dp-4KP" id="hNa-NH-qax"/>
+                        <outlet property="playButton" destination="Mkl-Dp-4KP" id="vGf-G6-ELg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135.32608695652175" y="15.942028985507248"/>
+            <point key="canvasLocation" x="33" y="16"/>
         </scene>
         <!--Game Controller-->
         <scene sceneID="GCp-de-KXC">
@@ -95,7 +95,7 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="onHomeClick:" destination="Lpw-wQ-jI9" eventType="touchUpInside" id="VhK-bw-ZiX"/>
+                                            <action selector="onHomeClick:" destination="Lpw-wQ-jI9" eventType="touchUpInside" id="IMG-mh-W1Q"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKb-Mq-PiL">
@@ -171,7 +171,7 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="unwind:" destination="EFL-PX-K4q" eventType="touchUpInside" id="N7j-XS-eT7"/>
+                                            <action selector="onBackClick:" destination="EFL-PX-K4q" eventType="touchUpInside" id="fWz-qj-Tou"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xb0-em-A7t">
@@ -274,6 +274,7 @@
                         <outlet property="tableView" destination="ZIo-Rp-qrZ" id="zLL-vr-lyQ"/>
                         <segue destination="Lpw-wQ-jI9" kind="show" identifier="playGame" id="7c1-At-vFF"/>
                         <segue destination="b2G-ZY-vxq" kind="show" identifier="Leaderboard" id="2dT-nf-Me6"/>
+                        <segue destination="HtS-xz-gi3" kind="unwind" identifier="unwindToHomeFromSelect" unwindAction="unwindToHomeControllerWithSegue:" id="odT-Bk-nxA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HOr-z9-TcX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -410,7 +411,7 @@
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="9X8-7M-aY1" kind="unwind" identifier="unwindToHomeController" unwindAction="unwindToHomeControllerWithSegue:" id="cUh-Q1-8ZD"/>
+                                                    <action selector="onHomeClick:" destination="xb4-Bu-RzF" eventType="touchUpInside" id="7k3-gw-7bb"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Db5-kp-1fq">
@@ -447,6 +448,7 @@
                     <connections>
                         <outlet property="playerTimeLabel" destination="ySP-SE-r7m" id="oSC-rX-WUb"/>
                         <outlet property="songTitleLabel" destination="X9u-9F-Tj2" id="npl-xi-5HW"/>
+                        <segue destination="9X8-7M-aY1" kind="unwind" identifier="unwindToHomeFromEnd" unwindAction="unwindToHomeControllerWithSegue:" id="r4f-eI-PYC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dNe-LY-0AP" userLabel="First Responder" sceneMemberID="firstResponder"/>

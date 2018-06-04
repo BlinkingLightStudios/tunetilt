@@ -219,9 +219,7 @@ class GameController: UIViewController, KeyDelegate, SequencePlayerDelegate {
         self.view.isUserInteractionEnabled = true
     }
     
-    @IBAction func unwindToGameController(segue:UIStoryboardSegue) {
-        
-    }
+    @IBAction func unwindToGameController(segue:UIStoryboardSegue) {}
 
 }
 

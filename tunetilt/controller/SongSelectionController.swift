@@ -8,14 +8,13 @@
 
 import UIKit
 
-class SongSelectionController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class SongSelectionController: UIViewController, UITableViewDataSource, UITableViewDelegate, SongsLoaderDelegate {
     
     // Data fields
-    var songs = [Song]()
+    var songs: [Song] = [Song]()
     var selectedSong = Song()
     var displayPlayState: Bool = true
     var player: String?
-    let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Sequences.plist")
     let storage = SongsStorage()
     
     // Outlet fields
@@ -24,13 +23,28 @@ class SongSelectionController: UIViewController, UITableViewDataSource, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadData()
         // Set up the table view for callbacks
         tableView.dataSource = self
         tableView.delegate = self
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        let songsLoader = SongsLoader()
+        songsLoader.delegate = self
+        songsLoader.fetch()
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        if songs.count == 0 {
+            let loadingLabel: UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: tableView.bounds.size.height))
+            loadingLabel.text = "updating songs..."
+            loadingLabel.font = UIFont(name: "GermaniaOne-Regular", size: UIFont.labelFontSize)
+            loadingLabel.textColor = UIColor.white
+            loadingLabel.textAlignment = .center
+            tableView.backgroundView = loadingLabel
+        }
+        
         return songs.count
     }
     
@@ -56,11 +70,6 @@ class SongSelectionController: UIViewController, UITableViewDataSource, UITableV
         return cell
     }
     
-    @IBAction func unwind(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
-    
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedSong = songs[indexPath.row]
         if (!displayPlayState){
@@ -82,19 +91,11 @@ class SongSelectionController: UIViewController, UITableViewDataSource, UITableV
             GameController.song = selectedSong
             GameController.player = player
         }
-        
     }
     
-    func loadData() {
-        if let data = try? Data(contentsOf: dataFilePath!){
-            let decoder = PropertyListDecoder()
-            do{
-                songs = try decoder.decode([Song].self, from: data)
-            }
-            catch{
-                print("Can't Load Data \(error)")
-            }
-        }
+    func onSongsLoaded(songs: [Song]) {
+        self.songs = songs
+        tableView.reloadData()
     }
     
     @IBAction func reloadData(_ sender: Any) {
@@ -115,6 +116,10 @@ class SongSelectionController: UIViewController, UITableViewDataSource, UITableV
         default:
             return "Unknown"
         }
+    }
+    
+    @IBAction func onBackClick(_ sender: Any) {
+        performSegue(withIdentifier: "unwindToHomeFromSelect", sender: self)
     }
     
 }

@@ -27,5 +27,8 @@ class EndGameController: UIViewController {
         playerTimeLabel.text = "Time: \(roundedTime)s"
     }
     
+    @IBAction func onHomeClick(_ sender: Any) {
+        performSegue(withIdentifier: "unwindToHomeFromEnd", sender: self)
+    }
 
 }

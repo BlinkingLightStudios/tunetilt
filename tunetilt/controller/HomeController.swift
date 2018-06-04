@@ -7,23 +7,19 @@
 //
 
 import UIKit
-import Firebase
 import GameKit
+
 class HomeController: UIViewController, GKGameCenterControllerDelegate {
     
     
     var gcEnabled = Bool()
     @IBOutlet weak var playButton: UIButton!
-    var db: Firestore!
-    var newNote = [Song]()
-    var storage = SongsStorage()
     var player: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         player = "Guest"
         authenticatePlayer()
-        readNotes()
         styleButton()
     }
     
@@ -64,29 +60,7 @@ class HomeController: UIViewController, GKGameCenterControllerDelegate {
             player = p
         }
     }
-
-    func readNotes(){
-        db = Firestore.firestore()
-        db.collection("sequences").getDocuments() { (querySnapshot, err) in
-            if let err = err {
-                print("Error getting documents: \(err)")
-            } else {
-                for document in querySnapshot!.documents {
-                    let id = document.documentID
-                    if let notes = document.data()["notes"] as? [String]{
-                        if let name = document.data()["name"] as? String {
-                        let newItem = Song(id: id, notes: notes, name: name)
-                        self.newNote.append(newItem)
-                        self.storage.saveData(theNote: self.newNote)
-                        }
-                    }
-                }
-            }
-        }
-    }
-    @IBAction func unwindToHomeController(segue:UIStoryboardSegue) {
-       
-    }
-
+    
+    @IBAction func unwindToHomeController(segue: UIStoryboardSegue) {}
 }
 
