@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A3ECA6A9474724D6261150D8 /* Pods_tunetilt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C59B65FE3C31E015FF53A99A /* Pods_tunetilt.framework */; };
 		A95C12D9E8598A8C9927C9FA /* Pods_tunetilt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC4895FE5CA958516676BB4 /* Pods_tunetilt.framework */; };
 		C04290B420B3ECD200A95719 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C04290B320B3ECD200A95719 /* GoogleService-Info.plist */; };
 		C04290B820B3ECEA00A95719 /* SequencesStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04290B720B3ECEA00A95719 /* SequencesStorage.swift */; };
@@ -98,6 +99,7 @@
 			files = (
 				A95C12D9E8598A8C9927C9FA /* Pods_tunetilt.framework in Frameworks */,
 				DC51890320C22D62008E16A2 /* GameKit.framework in Frameworks */,
+				A3ECA6A9474724D6261150D8 /* Pods_tunetilt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,7 +566,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2A9AZU9A2Y;
+				DEVELOPMENT_TEAM = 6WR8B5D8J2;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = tunetilt/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
@@ -588,7 +590,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2A9AZU9A2Y;
+				DEVELOPMENT_TEAM = 6WR8B5D8J2;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = tunetilt/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;

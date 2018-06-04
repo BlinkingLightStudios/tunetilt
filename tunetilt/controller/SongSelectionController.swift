@@ -22,7 +22,6 @@ class SongSelectionController: UIViewController, UITableViewDataSource, UITableV
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var buttonSwitch: UIButton!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
@@ -93,7 +92,7 @@ class SongSelectionController: UIViewController, UITableViewDataSource, UITableV
                 songs = try decoder.decode([Song].self, from: data)
             }
             catch{
-                print("This is \(error)")
+                print("Can't Load Data \(error)")
             }
         }
     }
