@@ -20,9 +20,6 @@
 		DD17514720C54603002E6F1E /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD17514620C54603002E6F1E /* Social.framework */; };
 		DD18F86F20BB92F8003773A5 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD18F86E20BB92F8003773A5 /* Key.swift */; };
 		DD20DF3620B13E8000C7A9F4 /* SongSelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD20DF3520B13E7F00C7A9F4 /* SongSelectionController.swift */; };
-		DD20DF3A20B1458300C7A9F4 /* AnimatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD20DF3720B1458300C7A9F4 /* AnimatorManager.swift */; };
-		DD20DF3B20B1458300C7A9F4 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD20DF3820B1458300C7A9F4 /* StorageManager.swift */; };
-		DD20DF3C20B1458300C7A9F4 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD20DF3920B1458300C7A9F4 /* AlertHelper.swift */; };
 		DD3A96A720B41ED000465F8B /* a#.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD3A969A20B41ED000465F8B /* a#.mp3 */; };
 		DD3A96A820B41ED000465F8B /* c#.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD3A969B20B41ED000465F8B /* c#.mp3 */; };
 		DD3A96A920B41ED000465F8B /* c.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD3A969C20B41ED000465F8B /* c.mp3 */; };
@@ -65,9 +62,6 @@
 		DD17514620C54603002E6F1E /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		DD18F86E20BB92F8003773A5 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 		DD20DF3520B13E7F00C7A9F4 /* SongSelectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongSelectionController.swift; sourceTree = "<group>"; };
-		DD20DF3720B1458300C7A9F4 /* AnimatorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatorManager.swift; sourceTree = "<group>"; };
-		DD20DF3820B1458300C7A9F4 /* StorageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
-		DD20DF3920B1458300C7A9F4 /* AlertHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 		DD3A969A20B41ED000465F8B /* a#.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "a#.mp3"; sourceTree = "<group>"; };
 		DD3A969B20B41ED000465F8B /* c#.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "c#.mp3"; sourceTree = "<group>"; };
 		DD3A969C20B41ED000465F8B /* c.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = c.mp3; sourceTree = "<group>"; };
@@ -150,9 +144,6 @@
 			isa = PBXGroup;
 			children = (
 				C04290B720B3ECEA00A95719 /* SequencesStorage.swift */,
-				DD20DF3920B1458300C7A9F4 /* AlertHelper.swift */,
-				DD20DF3720B1458300C7A9F4 /* AnimatorManager.swift */,
-				DD20DF3820B1458300C7A9F4 /* StorageManager.swift */,
 				DDEBD5D620C3B18900D7C664 /* SequencePlayer.swift */,
 				DC5188FE20C223A7008E16A2 /* ScoreManager.swift */,
 				DC5188F720C22200008E16A2 /* LeaderboardRow.swift */,
@@ -415,7 +406,6 @@
 				DC5188FF20C223A7008E16A2 /* ScoreManager.swift in Sources */,
 				DDCD987820AA946300B8D4D2 /* HomeController.swift in Sources */,
 				DD18F86F20BB92F8003773A5 /* Key.swift in Sources */,
-				DD20DF3A20B1458300C7A9F4 /* AnimatorManager.swift in Sources */,
 				DC5188FA20C22230008E16A2 /* LeaderboardController.swift in Sources */,
 				C04290B820B3ECEA00A95719 /* SequencesStorage.swift in Sources */,
 				DC5188FD20C22306008E16A2 /* TuneTilt.xcdatamodeld in Sources */,
@@ -423,9 +413,7 @@
 				DDEBD5D920C3F18800D7C664 /* EndGameController.swift in Sources */,
 				DD20DF3620B13E8000C7A9F4 /* SongSelectionController.swift in Sources */,
 				DDEBD5D720C3B18900D7C664 /* SequencePlayer.swift in Sources */,
-				DD20DF3B20B1458300C7A9F4 /* StorageManager.swift in Sources */,
 				DC5188F820C22200008E16A2 /* LeaderboardRow.swift in Sources */,
-				DD20DF3C20B1458300C7A9F4 /* AlertHelper.swift in Sources */,
 				DDCD988920AA959900B8D4D2 /* GameController.swift in Sources */,
 				DDAF537420C17E7400738BE8 /* Song.swift in Sources */,
 				DDCD987620AA946300B8D4D2 /* AppDelegate.swift in Sources */,

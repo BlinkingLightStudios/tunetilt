@@ -10,13 +10,14 @@ import Foundation
 
 class SongsStorage {
 
+    // Fields
     var note = Song()
     let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Sequences.plist")
     
     
-    func saveData(theNote: [Song]){
+    func saveData(theNote: [Song]) {
         let encoder = PropertyListEncoder()
-        do{
+        do {
             print(dataFilePath!)
             let data = try encoder.encode(theNote)
             try data.write(to: dataFilePath!)
@@ -25,7 +26,6 @@ class SongsStorage {
             print("Error saving data \(error)")
         }
     }
-
     
 }
 

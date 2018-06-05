@@ -11,6 +11,7 @@ import AudioKit
 
 class SequencePlayer {
 
+    // Fialds
     let sequence: [String]
     var counter = -1
     var timer = Timer()
@@ -21,27 +22,33 @@ class SequencePlayer {
     }
     
     func playSequence() {
+        // Reset the timer
         timer.invalidate()
 
+        // Start a new timer
         timer = Timer.scheduledTimer(timeInterval: 0.8, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
     }
     
     
     @objc func timerAction() throws {
+        // Increment the counter
         counter += 1
         
         if counter < sequence.count {
+            // Play the note
             let note = sequence[counter].lowercased()
             try play(audio: note)
             delegate?.onItemPlayed(index: counter + 1)
         }
         else {
+            // End the sequence player
             timer.invalidate()
             counter = -1
             delegate?.onSequenceEnd()
         }
     }
     
+    // Plays the note
     private func play(audio: String) throws {
         let audioFile = try AKAudioFile(readFileName: "\(audio).mp3")
         

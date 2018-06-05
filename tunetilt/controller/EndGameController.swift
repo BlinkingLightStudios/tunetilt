@@ -15,6 +15,7 @@ class EndGameController: UIViewController {
     var song: Song?
     var playerName: String?
     var gameTime: Double?
+    var shareText: String?
     
     // Outlets
     @IBOutlet weak var bestTimeLabel: UILabel!
@@ -23,15 +24,22 @@ class EndGameController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Save the player score
         let s = ScoreManager()
         s.save(player: playerName!, score: gameTime!, tune: song!.id)
         
+        // Format the scores
         let roundedPlayerTime = Double(round(1000 * gameTime!)/1000)
         let roundedBestTime = Double(round(1000 * s.getBest(player: playerName!, tune: song!.id))/1000)
         
+        // Set the labels
         songTitleLabel.text = song!.name
         playerTimeLabel.text = "Time: \(roundedPlayerTime)s"
         bestTimeLabel.text = "Best Time: \(roundedBestTime)s"
+        
+        // Set the share text
+        let link = "https://blinking-light-studios.github.io/tunetilt/"
+        shareText = "I just played \(song!.name) in \(roundedPlayerTime)s. Play Signature Keys here: \(link)"
     }
     
     @IBAction func onHomeClick(_ sender: Any) {
@@ -39,42 +47,15 @@ class EndGameController: UIViewController {
     }
     
     @IBAction func clicktoShare(_ sender: Any) {
-        let roundedPlayerTime = Double(round(1000 * gameTime!)/1000)
-        let link = "https://blinking-light-studios.github.io/tunetilt/"
-        let shareText = "I just played \(song!.name) in \(roundedPlayerTime)s. Play Signature Keys here: \(link)"
-        
+        // Create the action sheet
         let actionSheet = UIAlertController(title: "Share It!", message: "Share your Score.", preferredStyle: .actionSheet)
 
-        let shareFB = UIAlertAction(title: "Share to Facebook", style: .default) { (action) in
-            
-            if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeFacebook) {
-                let post = SLComposeViewController(forServiceType: SLServiceTypeFacebook)!
-                
-                post.setInitialText(shareText)
-                
-                self.present(post, animated: true, completion: nil)
-            }
-            else {
-                self.showError(service: "Facebook.")
-            }
-        }
-        
-        let shareTwitter = UIAlertAction(title: "Share to Twitter", style: .default) { (action) in
-            
-            if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeTwitter) {
-                let post = SLComposeViewController(forServiceType: SLServiceTypeTwitter)!
-                
-                post.setInitialText(shareText)
-                
-                self.present(post, animated: true, completion: nil)
-            }
-            else {
-                self.showError(service: "Twitter.")
-            }
-        }
-        
+        // Set up the social sources
+        let shareFB = getSocial(title: "Share to Facebook", serviceType: SLServiceTypeFacebook, errorService: "Facebook.")
+        let shareTwitter = getSocial(title: "Share to Twitter", serviceType: SLServiceTypeTwitter, errorService: "Twitter.")
         let cancelShare = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         
+        // Add them to the action sheet
         actionSheet.addAction(shareFB)
         actionSheet.addAction(shareTwitter)
         actionSheet.addAction(cancelShare)
@@ -82,6 +63,21 @@ class EndGameController: UIViewController {
         self.present(actionSheet, animated: true, completion: nil)
     }
     
+    func getSocial(title: String, serviceType: String, errorService: String) -> UIAlertAction {
+        return UIAlertAction(title: title, style: .default) { (action) in
+            
+            if SLComposeViewController.isAvailable(forServiceType: serviceType) {
+                let post = SLComposeViewController(forServiceType: serviceType)!
+                
+                post.setInitialText(self.shareText!)
+                
+                self.present(post, animated: true, completion: nil)
+            }
+            else {
+                self.showError(service: errorService)
+            }
+        }
+    }
     
     func showError(service: String) {
         let showError = UIAlertController(title: "Error", message: "You are not connected to " + service, preferredStyle: .alert)

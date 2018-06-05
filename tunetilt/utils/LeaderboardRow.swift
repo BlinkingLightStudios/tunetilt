@@ -8,9 +8,10 @@
 
 import UIKit
 
-//Custom class used to reference the rows in the leaderboard table. Contains references to two labels
+// Custom class used to reference the rows in the leaderboard table. Contains references to two labels
 class LeaderboardRow: UITableViewCell {
     
+    // Outlet fields
     @IBOutlet weak var player: UILabel!
     @IBOutlet weak var score: UILabel!
     
