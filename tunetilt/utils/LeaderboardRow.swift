@@ -8,6 +8,7 @@
 
 import UIKit
 
+//Custom class used to reference the rows in the leaderboard table. Contains references to two labels
 class LeaderboardRow: UITableViewCell {
     
     @IBOutlet weak var player: UILabel!
