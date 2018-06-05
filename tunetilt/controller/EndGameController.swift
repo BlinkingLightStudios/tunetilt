@@ -40,7 +40,7 @@ class EndGameController: UIViewController {
     
     @IBAction func clicktoShare(_ sender: Any) {
         let roundedPlayerTime = Double(round(1000 * gameTime!)/1000)
-        let link = "https://www.google.com"
+        let link = "https://blinking-light-studios.github.io/tunetilt/"
         let shareText = "I just played \(song!.name) in \(roundedPlayerTime)s. Play Signature Keys here: \(link)"
         
         let actionSheet = UIAlertController(title: "Share It!", message: "Share your Score.", preferredStyle: .actionSheet)
