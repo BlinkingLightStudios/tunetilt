@@ -1,5 +1,5 @@
-# Siganture Keys
-Siganture Keys is an iOS game about sound and motion. Built in Swift, it takes advantage of Apple's CoreData, Social and DynamicAnimator libraries, as well as Firebase, and AudioKit. This project was done as a part of a major uni project in **42889 iOS Application Development**.
+# Signature Keys
+Signature Keys is an iOS game about sound and motion. Built in Swift, it takes advantage of Apple's CoreData, Social and DynamicAnimator libraries, as well as Firebase, and AudioKit. This project was done as a part of a major uni project in **42889 iOS Application Development**.
 
 ## Features
 - Learn how to play simple piano progressions with fun, rewarding gameplay
